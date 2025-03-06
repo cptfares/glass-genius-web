@@ -38,9 +38,9 @@ const Header = () => {
       )}
     >
       <div className="container px-4 mx-auto flex justify-between items-center">
-        <div className="flex items-center">
+        <div className="flex items-center flex-shrink-0">
           <NavLink to="/" onClick={closeMobileMenu}>
-            <div className="flex items-center gap-3">
+            <div className="hidden md:flex items-center gap-3">
               <img
                 src="/lovable-uploads/f3ed474e-96f2-47b8-9787-ca848f2477f4.png"
                 alt="Glass Genius Logo"
@@ -51,22 +51,25 @@ const Header = () => {
         </div>
 
         {/* Top contact bar */}
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-6 flex-grow justify-end">
           <a
             href="tel:+12409685060"
-            className="flex items-center gap-2 text-sm md:text-base font-medium text-brand-dark hover:text-brand-blue transition-all-200"
+            className="flex items-center gap-2 text-sm md:text-base font-medium text-brand-dark hover:text-brand-blue transition-all-200 whitespace-nowrap"
           >
             <Phone size={16} className="text-brand-blue" />
             <span>+1 240-968-5060</span>
           </a>
-          <Button asChild className="bg-brand-blue hover:bg-brand-blue/90">
+          <Button
+            asChild
+            className="bg-brand-blue hover:bg-brand-blue/90 whitespace-nowrap"
+          >
             <NavLink to="/contact">Request A Quote</NavLink>
           </Button>
         </div>
 
         {/* Mobile menu toggle */}
         <button
-          className="md:hidden p-2"
+          className="p-2"
           onClick={toggleMobileMenu}
           aria-label="Toggle menu"
         >
