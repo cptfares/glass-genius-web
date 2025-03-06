@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import ServicesDropdown from "./ServicesDropdown";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -89,9 +90,7 @@ const Header = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/services" className={({isActive}) => cn("nav-link", isActive && "active")}>
-                OUR SERVICES
-              </NavLink>
+              <ServicesDropdown />
             </li>
             <li>
               <NavLink to="/emergency" className={({isActive}) => cn("nav-link", isActive && "active")}>
@@ -150,13 +149,7 @@ const Header = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink 
-                to="/services" 
-                className="block py-2 text-lg font-medium border-b border-gray-100"
-                onClick={closeMobileMenu}
-              >
-                OUR SERVICES
-              </NavLink>
+              <ServicesDropdown isMobile onItemClick={closeMobileMenu} />
             </li>
             <li>
               <NavLink 

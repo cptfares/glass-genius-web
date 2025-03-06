@@ -23,6 +23,32 @@ const Layout = ({ children }: LayoutProps) => {
         {children}
       </main>
       <Footer />
+
+      {/* Global styles */}
+      <style jsx global>{`
+        .nav-link {
+          font-weight: 500;
+          font-size: 14px;
+          color: #1d2737;
+          position: relative;
+          transition: color 0.2s;
+          padding: 0.5rem 0;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+          color: #4a9fd8;
+        }
+        
+        .nav-link.active:after {
+          content: '';
+          position: absolute;
+          bottom: -3px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: #4a9fd8;
+        }
+      `}</style>
     </div>
   );
 };
