@@ -1,8 +1,8 @@
-
 import Layout from "@/components/layout/Layout";
 import { CheckCircle2, Home, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import Seo from "@/components/seo/Seo";
 
 const residentialServices = [
   {
@@ -38,14 +38,54 @@ const residentialServices = [
 ];
 
 const ResidentialGlass = () => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Residential Glass Services",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Glass Genius",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Reston",
+        "addressRegion": "VA",
+        "postalCode": "20190",
+        "addressCountry": "US"
+      },
+      "telephone": "+12409685060"
+    },
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 38.9586,
+        "longitude": -77.3570
+      },
+      "geoRadius": "32000"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0.00",
+      "priceCurrency": "USD",
+      "description": "Free estimates for residential glass services"
+    }
+  };
+
   return (
     <Layout>
+      <Seo 
+        title="Residential Glass Services | Window, Door & Shower Glass | Glass Genius"
+        description="Elevate your home with custom glass solutions. From window replacements to shower enclosures, we provide quality residential glass services in Reston, VA."
+        canonicalUrl="/residential"
+        schema={schema}
+      />
+      
       {/* Hero Section */}
       <div className="relative bg-brand-dark">
         <div className="absolute inset-0 z-0 opacity-20">
           <img 
             src="/lovable-uploads/97a20b32-0b00-444e-9b32-f920104ba35c.png" 
-            alt="Residential Glass Services" 
+            alt="Residential glass installation showing a home with new windows" 
             className="w-full h-full object-cover" 
           />
           <div className="absolute inset-0 bg-brand-dark/50"></div>
@@ -178,3 +218,4 @@ const ResidentialGlass = () => {
 };
 
 export default ResidentialGlass;
+

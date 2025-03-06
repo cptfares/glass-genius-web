@@ -1,9 +1,9 @@
-
 import React from "react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Phone } from "lucide-react";
+import Seo from "@/components/seo/Seo";
 
 const portfolioProjects = [
   {
@@ -45,14 +45,40 @@ const portfolioProjects = [
 ];
 
 const Portfolio = () => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": portfolioProjects.map((project, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "CreativeWork",
+        "name": project.title,
+        "description": project.description,
+        "image": project.image,
+        "creator": {
+          "@type": "Organization",
+          "name": "Glass Genius"
+        }
+      }
+    }))
+  };
+
   return (
     <Layout>
+      <Seo 
+        title="Glass Project Portfolio | Glass Genius in Reston, VA"
+        description="Explore our completed glass projects for both residential and commercial clients throughout Reston and surrounding areas."
+        canonicalUrl="/portfolio"
+        schema={schema}
+      />
+      
       {/* Hero Section */}
       <div className="relative bg-brand-dark">
         <div className="absolute inset-0 z-0 opacity-20">
           <img 
             src="/lovable-uploads/97a20b32-0b00-444e-9b32-f920104ba35c.png" 
-            alt="Glass Genius Portfolio" 
+            alt="Showcase of completed glass installation projects" 
             className="w-full h-full object-cover" 
           />
           <div className="absolute inset-0 bg-brand-dark/50"></div>

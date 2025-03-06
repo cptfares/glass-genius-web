@@ -1,19 +1,53 @@
-
 import React from "react";
 import Layout from "@/components/layout/Layout";
 import { Check, Phone, Award, Clock, Users, Smile } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import Seo from "@/components/seo/Seo";
 
 const About = () => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Glass Genius",
+      "description": "Expert glass solutions for residential and commercial properties in Reston, Virginia and surrounding areas.",
+      "logo": "/og-image.png",
+      "founder": "Glass Genius Team",
+      "foundingDate": "2010",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Reston",
+        "addressRegion": "VA",
+        "postalCode": "20190",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+12409685060",
+        "contactType": "customer service",
+        "availableLanguage": "English"
+      },
+      "areaServed": "Reston, Virginia and a 20-mile radius, including Herndon, Vienna, Tysons, Falls Church, Fairfax, Ashburn, Sterling, Chantilly, McLean, Oakton, Great Falls, Centreville, Manassas, and more"
+    }
+  };
+
   return (
     <Layout>
+      <Seo 
+        title="About Glass Genius | Glass Repair & Installation in Reston, VA"
+        description="Learn about Glass Genius, providing expert glass repair and installation services for residential and commercial properties in Reston, VA and surrounding areas."
+        canonicalUrl="/about"
+        schema={schema}
+      />
+      
       {/* Hero Section */}
       <div className="relative bg-brand-dark">
         <div className="absolute inset-0 z-0 opacity-20">
           <img 
             src="/lovable-uploads/97a20b32-0b00-444e-9b32-f920104ba35c.png" 
-            alt="About Glass Genius" 
+            alt="Glass Genius technicians working on a professional glass installation" 
             className="w-full h-full object-cover" 
           />
           <div className="absolute inset-0 bg-brand-dark/50"></div>

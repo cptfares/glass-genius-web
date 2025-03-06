@@ -4,6 +4,8 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
+import Preload from "@/components/seo/Preload";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import EmergencyServices from "./pages/EmergencyServices";
@@ -87,37 +89,40 @@ const servicePages = [
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/emergency" element={<EmergencyServices />} />
-          <Route path="/residential" element={<Residential />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/contact" element={<Contact />} />
-          
-          {/* Service pages */}
-          <Route path="/services/glass-repair" element={<GlassRepair />} />
-          <Route path="/services/window-replacement" element={<WindowReplacement />} />
-          <Route path="/services/shower-enclosures" element={<ShowerEnclosures />} />
-          
-          {/* Generate routes for other service pages */}
-          {servicePages.map(({ path, props }) => (
-            <Route 
-              key={path} 
-              path={`/services/${path}`} 
-              element={<ServiceTemplate {...props} />} 
-            />
-          ))}
-          
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
+    <HelmetProvider>
+      <Preload />
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/emergency" element={<EmergencyServices />} />
+            <Route path="/residential" element={<Residential />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/contact" element={<Contact />} />
+            
+            {/* Service pages */}
+            <Route path="/services/glass-repair" element={<GlassRepair />} />
+            <Route path="/services/window-replacement" element={<WindowReplacement />} />
+            <Route path="/services/shower-enclosures" element={<ShowerEnclosures />} />
+            
+            {/* Generate routes for other service pages */}
+            {servicePages.map(({ path, props }) => (
+              <Route 
+                key={path} 
+                path={`/services/${path}`} 
+                element={<ServiceTemplate {...props} />} 
+              />
+            ))}
+            
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </HelmetProvider>
   </QueryClientProvider>
 );
 

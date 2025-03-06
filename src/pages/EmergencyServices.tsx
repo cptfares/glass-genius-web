@@ -1,19 +1,60 @@
-
 import React from "react";
 import Layout from "@/components/layout/Layout";
 import { CalendarClock, Shield, Ban, Truck, Clock, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import Seo from "@/components/seo/Seo";
 
 const EmergencyServices = () => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Emergency Glass Repair",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Glass Genius",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Reston",
+        "addressRegion": "VA",
+        "postalCode": "20190",
+        "addressCountry": "US"
+      },
+      "telephone": "+12409685060"
+    },
+    "availableChannel": {
+      "@type": "ServiceChannel",
+      "serviceUrl": "https://glassgenius.com/emergency",
+      "servicePhone": "+12409685060",
+      "availableLanguage": "English"
+    },
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 38.9586,
+        "longitude": -77.3570
+      },
+      "geoRadius": "32000"
+    },
+    "hoursAvailable": "Mo-Su 00:00-24:00"
+  };
+
   return (
     <Layout>
+      <Seo 
+        title="24/7 Emergency Glass Repair Services | Glass Genius"
+        description="Fast response when you need it most. We provide emergency glass repair services around the clock for residential and commercial properties in Reston, VA and surrounding areas."
+        canonicalUrl="/emergency"
+        schema={schema}
+      />
+      
       {/* Hero Section */}
       <div className="relative bg-brand-dark">
         <div className="absolute inset-0 z-0 opacity-20">
           <img 
             src="/lovable-uploads/97a20b32-0b00-444e-9b32-f920104ba35c.png" 
-            alt="Emergency Glass Repair" 
+            alt="Emergency glass repair technician responding to a call" 
             className="w-full h-full object-cover" 
           />
           <div className="absolute inset-0 bg-brand-dark/50"></div>

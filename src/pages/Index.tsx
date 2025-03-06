@@ -6,10 +6,65 @@ import ServiceCard from "@/components/home/ServiceCard";
 import ContactForm from "@/components/contact/ContactForm";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import Seo from "@/components/seo/Seo";
 
 const Index = () => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Glass Genius",
+    "image": "/og-image.png",
+    "url": "https://glassgenius.com",
+    "telephone": "+12409685060",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Reston",
+      "addressRegion": "VA",
+      "postalCode": "20190",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 38.9586,
+      "longitude": -77.3570
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "08:00",
+      "closes": "18:00"
+    }],
+    "sameAs": [
+      "https://www.facebook.com/glassgenius",
+      "https://twitter.com/glassgenius"
+    ],
+    "priceRange": "$$",
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 38.9586,
+        "longitude": -77.3570
+      },
+      "geoRadius": "32000"
+    }
+  };
+
   return (
     <Layout>
+      <Seo 
+        title="Glass Genius | Professional Glass Repair & Installation in Reston, VA"
+        description="Glass Genius provides expert glass repair and installation services in Reston, Virginia and surrounding areas. Commercial and residential solutions with free estimates."
+        canonicalUrl="/"
+        schema={schema}
+      />
+      
       {/* Hero Section */}
       <HeroSection 
         title="Professional Glass Repair & Installation" 
@@ -108,7 +163,7 @@ const Index = () => {
             <div className="order-1 md:order-2">
               <img 
                 src="/lovable-uploads/97a20b32-0b00-444e-9b32-f920104ba35c.png"
-                alt="Glass repair technicians at work" 
+                alt="Glass repair technicians working on a window installation project" 
                 className="rounded-lg shadow-md w-full h-full object-cover max-h-[500px]"
               />
             </div>
@@ -121,7 +176,7 @@ const Index = () => {
         <div className="absolute inset-0 z-0 opacity-20">
           <img 
             src="/lovable-uploads/97a20b32-0b00-444e-9b32-f920104ba35c.png" 
-            alt="Background" 
+            alt="Glass repair service background" 
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-brand-dark/70"></div>
