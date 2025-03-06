@@ -1,149 +1,243 @@
 
+import React from "react";
 import Layout from "@/components/layout/Layout";
-import HeroSection from "@/components/home/HeroSection";
-import ContactForm from "@/components/contact/ContactForm";
-import { Check } from "lucide-react";
+import { Check, Phone, Award, Clock, Users, Smile } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
     <Layout>
-      {/* Page Header */}
-      <HeroSection 
-        title="About Us" 
-        isSmall={true}
-      />
+      {/* Hero Section */}
+      <div className="relative bg-brand-dark">
+        <div className="absolute inset-0 z-0 opacity-20">
+          <img 
+            src="/lovable-uploads/97a20b32-0b00-444e-9b32-f920104ba35c.png" 
+            alt="About Glass Genius" 
+            className="w-full h-full object-cover" 
+          />
+          <div className="absolute inset-0 bg-brand-dark/50"></div>
+        </div>
+        
+        <div className="container relative z-10 px-4 py-20 mx-auto text-center text-white">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">About Glass Genius</h1>
+          <p className="text-lg md:text-xl max-w-3xl mx-auto">
+            Expert glass solutions for residential and commercial properties in Reston, Virginia and surrounding areas.
+          </p>
+        </div>
+      </div>
       
-      {/* About Content */}
-      <section className="py-16">
-        <div className="container px-4 mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+      {/* Main Content */}
+      <div className="container px-4 py-16 mx-auto">
+        {/* Our Story Section */}
+        <div className="max-w-4xl mx-auto mb-20">
+          <h2 className="text-3xl font-bold mb-6 text-center">Our Story</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-lg text-gray-700 mb-6">
+                Glass Genius was founded with a simple mission: to provide exceptional glass services with the highest level of workmanship and customer satisfaction. What began as a small mobile glass repair operation has grown into a trusted name in glass solutions throughout Reston and the surrounding Virginia areas.
+              </p>
+              <p className="text-lg text-gray-700 mb-6">
+                We take pride in our ability to handle projects of all sizes, from emergency glass repairs to complex commercial installations. Our team of skilled technicians brings years of experience and a commitment to quality that sets us apart in today's competitive glass industry.
+              </p>
+              <p className="text-lg font-medium text-gray-800">
+                "Our mission is to create happiness through our services."
+              </p>
+            </div>
             <div>
               <img 
                 src="/lovable-uploads/97a20b32-0b00-444e-9b32-f920104ba35c.png" 
-                alt="Glass installation professionals" 
-                className="rounded-lg shadow-md w-full max-h-[500px] object-cover"
+                alt="Glass Genius team at work" 
+                className="rounded-lg shadow-md"
               />
             </div>
+          </div>
+        </div>
+        
+        {/* Why Choose Us Section */}
+        <div className="max-w-5xl mx-auto mb-20">
+          <h2 className="text-3xl font-bold mb-10 text-center">Why Choose Glass Genius</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 text-center">
+              <div className="flex justify-center mb-4">
+                <Award className="text-brand-blue h-12 w-12" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Quality Craftsmanship</h3>
+              <p className="text-gray-600">
+                We use only premium materials and maintain the highest standards in our installations and repairs.
+              </p>
+            </div>
             
-            <div className="animate-fade-up">
-              <h2 className="text-3xl font-bold mb-4">Our Story</h2>
-              <p className="text-gray-600 mb-6">
-                Glass Genius provides an excellent mobile service to meet all your glass doors and windows needs. Our continued dedication to providing quality services with the highest level of workmanship and customer service is what sets us apart in today's competitive glass industry.
+            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 text-center">
+              <div className="flex justify-center mb-4">
+                <Users className="text-brand-blue h-12 w-12" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Expert Team</h3>
+              <p className="text-gray-600">
+                Our technicians are highly trained professionals with years of experience in the glass industry.
               </p>
-              <p className="text-gray-600 mb-6">
-                No job is too big or too small for us.
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 text-center">
+              <div className="flex justify-center mb-4">
+                <Clock className="text-brand-blue h-12 w-12" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Prompt Service</h3>
+              <p className="text-gray-600">
+                We respect your time and schedule, providing reliable and punctual service for every project.
               </p>
-              <p className="text-gray-700 font-medium mb-6">
-                Our mission is to create happiness through our services.
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 text-center">
+              <div className="flex justify-center mb-4">
+                <Smile className="text-brand-blue h-12 w-12" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Customer Satisfaction</h3>
+              <p className="text-gray-600">
+                Your satisfaction is our priority, from the initial consultation to the completed project.
               </p>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="flex items-start gap-2">
-                  <Check className="text-brand-blue shrink-0 mt-1" size={18} />
-                  <span className="text-gray-700">Quality Workmanship</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <Check className="text-brand-blue shrink-0 mt-1" size={18} />
-                  <span className="text-gray-700">Expert Technicians</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <Check className="text-brand-blue shrink-0 mt-1" size={18} />
-                  <span className="text-gray-700">Mobile Service</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <Check className="text-brand-blue shrink-0 mt-1" size={18} />
-                  <span className="text-gray-700">Prompt Response</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <Check className="text-brand-blue shrink-0 mt-1" size={18} />
-                  <span className="text-gray-700">Free Estimates</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <Check className="text-brand-blue shrink-0 mt-1" size={18} />
-                  <span className="text-gray-700">Competitive Pricing</span>
-                </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Our Services Overview */}
+        <div className="max-w-4xl mx-auto mb-20">
+          <h2 className="text-3xl font-bold mb-6 text-center">Our Services</h2>
+          <p className="text-lg text-gray-700 mb-8 text-center">
+            Glass Genius provides a comprehensive range of glass services for both residential and commercial properties.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div className="bg-gray-50 p-6 rounded-lg border border-gray-100">
+              <h3 className="text-xl font-semibold mb-4">Residential Glass</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-2">
+                  <Check className="text-brand-blue h-5 w-5 mt-1 flex-shrink-0" />
+                  <span>Window repair and replacement</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="text-brand-blue h-5 w-5 mt-1 flex-shrink-0" />
+                  <span>Shower doors and enclosures</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="text-brand-blue h-5 w-5 mt-1 flex-shrink-0" />
+                  <span>Glass doors and entryways</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="text-brand-blue h-5 w-5 mt-1 flex-shrink-0" />
+                  <span>Mirrors and decorative glass</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="text-brand-blue h-5 w-5 mt-1 flex-shrink-0" />
+                  <span>Glass tabletops and shelving</span>
+                </li>
+              </ul>
+              <div className="mt-6">
+                <Button asChild variant="outline">
+                  <Link to="/residential">Learn More</Link>
+                </Button>
+              </div>
+            </div>
+            
+            <div className="bg-gray-50 p-6 rounded-lg border border-gray-100">
+              <h3 className="text-xl font-semibold mb-4">Commercial Glass</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-2">
+                  <Check className="text-brand-blue h-5 w-5 mt-1 flex-shrink-0" />
+                  <span>Storefront glass and doors</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="text-brand-blue h-5 w-5 mt-1 flex-shrink-0" />
+                  <span>Office partitions and dividers</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="text-brand-blue h-5 w-5 mt-1 flex-shrink-0" />
+                  <span>Security glass installation</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="text-brand-blue h-5 w-5 mt-1 flex-shrink-0" />
+                  <span>Display cases and shelving</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="text-brand-blue h-5 w-5 mt-1 flex-shrink-0" />
+                  <span>Glass railings and balustrades</span>
+                </li>
+              </ul>
+              <div className="mt-6">
+                <Button asChild variant="outline">
+                  <Link to="/commercial">Learn More</Link>
+                </Button>
               </div>
             </div>
           </div>
           
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-center">Why Choose Glass Genius?</h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              <div className="bg-white p-6 rounded-lg shadow-soft border border-gray-100">
-                <h3 className="text-xl font-bold mb-3">Experience & Expertise</h3>
-                <p className="text-gray-600">
-                  Our team of skilled technicians has years of experience in glass repair and installation, ensuring high-quality workmanship on every project.
-                </p>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-soft border border-gray-100">
-                <h3 className="text-xl font-bold mb-3">Customer Satisfaction</h3>
-                <p className="text-gray-600">
-                  We prioritize customer satisfaction and strive to exceed expectations with our professional service and attention to detail.
-                </p>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-soft border border-gray-100">
-                <h3 className="text-xl font-bold mb-3">Quality Materials</h3>
-                <p className="text-gray-600">
-                  We use only high-quality glass and materials to ensure durability, safety, and aesthetic appeal for all our installations.
-                </p>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-soft border border-gray-100">
-                <h3 className="text-xl font-bold mb-3">Prompt & Reliable</h3>
-                <p className="text-gray-600">
-                  We value your time and provide prompt, reliable service with clear communication throughout the entire process.
-                </p>
-              </div>
-            </div>
-            
-            <h2 className="text-3xl font-bold mb-6 text-center">Our Service Area</h2>
-            <p className="text-gray-600 text-center mb-8">
-              We proudly serve Reston, Virginia and a 20-mile radius, including:
+          <div className="bg-brand-blue/10 p-6 rounded-lg border border-brand-blue/20">
+            <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
+              <Clock className="text-brand-blue h-5 w-5 flex-shrink-0" />
+              <span>24/7 Emergency Services</span>
+            </h3>
+            <p className="text-gray-700 mb-4">
+              Glass emergencies don't wait for business hours. That's why Glass Genius provides 24/7 emergency glass repair services. Whether it's a broken storefront window, shattered home glass, or any glass emergency, our team is ready to respond quickly.
             </p>
-            
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-12">
-              <div className="bg-white p-4 rounded border border-gray-100 text-center shadow-sm">Herndon</div>
-              <div className="bg-white p-4 rounded border border-gray-100 text-center shadow-sm">Vienna</div>
-              <div className="bg-white p-4 rounded border border-gray-100 text-center shadow-sm">Tysons</div>
-              <div className="bg-white p-4 rounded border border-gray-100 text-center shadow-sm">Falls Church</div>
-              <div className="bg-white p-4 rounded border border-gray-100 text-center shadow-sm">Fairfax</div>
-              <div className="bg-white p-4 rounded border border-gray-100 text-center shadow-sm">Ashburn</div>
-              <div className="bg-white p-4 rounded border border-gray-100 text-center shadow-sm">Sterling</div>
-              <div className="bg-white p-4 rounded border border-gray-100 text-center shadow-sm">Chantilly</div>
-              <div className="bg-white p-4 rounded border border-gray-100 text-center shadow-sm">McLean</div>
-              <div className="bg-white p-4 rounded border border-gray-100 text-center shadow-sm">Oakton</div>
-              <div className="bg-white p-4 rounded border border-gray-100 text-center shadow-sm">Great Falls</div>
-              <div className="bg-white p-4 rounded border border-gray-100 text-center shadow-sm">Centreville</div>
-              <div className="bg-white p-4 rounded border border-gray-100 text-center shadow-sm">Manassas</div>
-              <div className="bg-white p-4 rounded border border-gray-100 text-center shadow-sm">Annandale</div>
-              <div className="bg-white p-4 rounded border border-gray-100 text-center shadow-sm">Springfield</div>
-              <div className="bg-white p-4 rounded border border-gray-100 text-center shadow-sm">Burke</div>
-              <div className="bg-white p-4 rounded border border-gray-100 text-center shadow-sm">Lorton</div>
-              <div className="bg-white p-4 rounded border border-gray-100 text-center shadow-sm">Woodbridge</div>
-              <div className="bg-white p-4 rounded border border-gray-100 text-center shadow-sm">Leesburg</div>
-            </div>
+            <Button asChild variant="outline">
+              <Link to="/emergency">Learn About Our Emergency Services</Link>
+            </Button>
           </div>
         </div>
-      </section>
-      
-      {/* Contact Form Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container px-4 mx-auto">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-4">Request a Free Estimate</h2>
-              <p className="text-gray-600">
-                Contact us today to get a free estimate for your glass repair or installation project.
-              </p>
-            </div>
+        
+        {/* Service Areas */}
+        <div className="max-w-4xl mx-auto mb-16">
+          <h2 className="text-3xl font-bold mb-6 text-center">Our Service Areas</h2>
+          <p className="text-lg text-gray-700 mb-8 text-center">
+            Glass Genius proudly serves Reston, Virginia and a 20-mile radius, covering these communities:
+          </p>
+          
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-8">
+            <div className="bg-gray-50 p-3 rounded-lg text-center">Reston</div>
+            <div className="bg-gray-50 p-3 rounded-lg text-center">Herndon</div>
+            <div className="bg-gray-50 p-3 rounded-lg text-center">Vienna</div>
+            <div className="bg-gray-50 p-3 rounded-lg text-center">Tysons</div>
+            <div className="bg-gray-50 p-3 rounded-lg text-center">Falls Church</div>
+            <div className="bg-gray-50 p-3 rounded-lg text-center">Fairfax</div>
+            <div className="bg-gray-50 p-3 rounded-lg text-center">Ashburn</div>
+            <div className="bg-gray-50 p-3 rounded-lg text-center">Sterling</div>
+            <div className="bg-gray-50 p-3 rounded-lg text-center">Chantilly</div>
+            <div className="bg-gray-50 p-3 rounded-lg text-center">McLean</div>
+            <div className="bg-gray-50 p-3 rounded-lg text-center">Oakton</div>
+            <div className="bg-gray-50 p-3 rounded-lg text-center">Great Falls</div>
+            <div className="bg-gray-50 p-3 rounded-lg text-center">Centreville</div>
+            <div className="bg-gray-50 p-3 rounded-lg text-center">Manassas</div>
+            <div className="bg-gray-50 p-3 rounded-lg text-center">Annandale</div>
+            <div className="bg-gray-50 p-3 rounded-lg text-center">Springfield</div>
+          </div>
+          
+          <p className="text-center text-gray-600">
+            Don't see your area listed? Contact us to check if we service your location!
+          </p>
+        </div>
+        
+        {/* Call to Action */}
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-2xl font-bold mb-6">Ready to Work with Glass Genius?</h2>
+          <p className="text-lg text-gray-700 mb-8">
+            Contact us today for a free consultation and estimate on your glass project.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="tel:+12409685060" 
+              className="inline-flex items-center justify-center gap-2 py-3 px-6 bg-brand-blue text-white rounded-md font-medium hover:bg-brand-blue/90 transition-all-200"
+            >
+              <Phone size={18} />
+              <span>+1 240-968-5060</span>
+            </a>
             
-            <ContactForm />
+            <Button asChild variant="outline">
+              <Link to="/contact">Request a Quote</Link>
+            </Button>
           </div>
         </div>
-      </section>
+      </div>
     </Layout>
   );
 };
