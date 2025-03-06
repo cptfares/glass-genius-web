@@ -1,7 +1,8 @@
 
 import React from "react";
 import ServiceLayout from "@/components/services/ServiceLayout";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, Phone } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface ServiceTemplateProps {
   title: string;
@@ -26,6 +27,21 @@ export default function ServiceTemplate({
     >
       <div className="space-y-4">
         {content}
+        
+        <div className="my-8 p-4 bg-gray-50 rounded-lg border border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <Phone className="text-brand-blue h-6 w-6 flex-shrink-0" />
+            <div>
+              <p className="text-sm text-gray-500">Call us for a free quote</p>
+              <a href="tel:+12409685060" className="text-lg font-medium hover:text-brand-blue transition-colors">
+                +1 240-968-5060
+              </a>
+            </div>
+          </div>
+          <Button asChild className="w-full sm:w-auto bg-brand-blue hover:bg-brand-blue/90">
+            <a href="tel:+12409685060">Call Now</a>
+          </Button>
+        </div>
         
         <h3 className="text-xl font-semibold mt-6 mb-4">Why Choose Glass Genius:</h3>
         <ul className="space-y-3">
