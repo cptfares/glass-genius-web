@@ -1,239 +1,241 @@
 
+import React from "react";
 import Layout from "@/components/layout/Layout";
 import HeroSection from "@/components/home/HeroSection";
-import ContactForm from "@/components/contact/ContactForm";
-import { Check, CircleDollarSign, Clock, Shield } from "lucide-react";
+import { CheckCircle2, Building2, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import Seo from "@/components/seo/Seo";
 
-const Commercial = () => {
+const CommercialGlass = () => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Commercial Glass Services",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Glass Genius",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Reston",
+        "addressRegion": "VA",
+        "postalCode": "20190",
+        "addressCountry": "US"
+      }
+    },
+    "serviceType": "Commercial Glass Installation and Repair",
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 38.9586,
+        "longitude": -77.3570
+      },
+      "geoRadius": "32000"
+    },
+    "description": "Expert commercial glass solutions for businesses in Reston and surrounding areas including storefront glass, office partitions, glass doors, and more."
+  };
+
   return (
     <Layout>
-      {/* Page Header */}
-      <HeroSection 
-        title="Commercial Glass Services" 
-        subtitle="Expert glass solutions for businesses, offices, and commercial properties."
-        isSmall={true}
+      <Seo
+        title="Commercial Glass Services | Glass Genius Reston VA"
+        description="Expert commercial glass solutions for businesses in Reston and surrounding areas including storefront glass, office partitions, glass doors, and more."
+        canonicalUrl="/commercial"
+        schema={schema}
       />
-      
-      {/* Services Content */}
+
+      <HeroSection
+        title="Commercial Glass Solutions"
+        subtitle="Expert glass solutions for your business - from storefronts to interior glass partitions"
+        imageUrl="/lovable-uploads/97a20b32-0b00-444e-9b32-f920104ba35c.png"
+      />
+
       <section className="py-16">
         <div className="container px-4 mx-auto">
+          <div className="max-w-3xl mx-auto mb-12 text-center">
+            <h2 className="text-3xl font-bold mb-4">Commercial Glass Services</h2>
+            <p className="text-gray-600">
+              Glass Genius provides expert commercial glass solutions for businesses in Reston and surrounding areas. 
+              We understand that your business's appearance and functionality matter, which is why we offer high-quality 
+              glass solutions tailored to your specific needs.
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <img 
                 src="/lovable-uploads/97a20b32-0b00-444e-9b32-f920104ba35c.png" 
-                alt="Commercial glass installation" 
-                className="rounded-lg shadow-md w-full object-cover max-h-[500px]"
+                alt="Commercial glass installation for storefront" 
+                className="rounded-lg shadow-md w-full h-full object-cover"
               />
             </div>
-            
-            <div className="animate-fade-up">
-              <h2 className="text-3xl font-bold mb-4">Commercial Glass Solutions</h2>
-              <p className="text-gray-600 mb-6">
-                Glass Genius provides professional glass services for all commercial properties, including storefronts, offices, retail spaces, and more. Our experienced team delivers high-quality workmanship with a focus on durability, safety, and aesthetics.
+            <div>
+              <h3 className="text-2xl font-bold mb-4">Storefront Glass Solutions</h3>
+              <p className="text-gray-600 mb-4">
+                Make a lasting impression with our custom storefront glass solutions. We design and install attractive, 
+                durable, and secure storefront systems that enhance your business's visibility and appeal.
               </p>
               <p className="text-gray-600 mb-6">
-                We understand that commercial glass installations require precision and attention to detail, which is why our skilled technicians ensure every project meets the highest standards of quality.
-              </p>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                <div className="flex items-start gap-2">
-                  <Check className="text-brand-blue shrink-0 mt-1" size={18} />
-                  <span className="text-gray-700">Storefront Glass</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <Check className="text-brand-blue shrink-0 mt-1" size={18} />
-                  <span className="text-gray-700">Office Partitions</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <Check className="text-brand-blue shrink-0 mt-1" size={18} />
-                  <span className="text-gray-700">Entry Systems</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <Check className="text-brand-blue shrink-0 mt-1" size={18} />
-                  <span className="text-gray-700">Glass Doors</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <Check className="text-brand-blue shrink-0 mt-1" size={18} />
-                  <span className="text-gray-700">Security Glass</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <Check className="text-brand-blue shrink-0 mt-1" size={18} />
-                  <span className="text-gray-700">Display Cases</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <Check className="text-brand-blue shrink-0 mt-1" size={18} />
-                  <span className="text-gray-700">Glass Railings</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <Check className="text-brand-blue shrink-0 mt-1" size={18} />
-                  <span className="text-gray-700">Custom Solutions</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-center">Our Commercial Services</h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              <div className="bg-white p-6 rounded-lg shadow-soft border border-gray-100">
-                <h3 className="text-xl font-bold mb-3">Storefront Glass</h3>
-                <p className="text-gray-600 mb-4">
-                  Make a lasting impression with our custom storefront glass solutions. We design and install attractive, durable storefront systems that enhance your business's curb appeal.
-                </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center gap-2">
-                    <Check className="text-brand-blue shrink-0" size={16} />
-                    <span className="text-gray-600">Frameless Systems</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="text-brand-blue shrink-0" size={16} />
-                    <span className="text-gray-600">Aluminum Framing</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="text-brand-blue shrink-0" size={16} />
-                    <span className="text-gray-600">Display Windows</span>
-                  </li>
-                </ul>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-soft border border-gray-100">
-                <h3 className="text-xl font-bold mb-3">Office Partitions</h3>
-                <p className="text-gray-600 mb-4">
-                  Create modern, open workspaces with our glass office partitions. They provide privacy while maintaining an open, collaborative environment and allowing natural light to flow.
-                </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center gap-2">
-                    <Check className="text-brand-blue shrink-0" size={16} />
-                    <span className="text-gray-600">Frameless Partitions</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="text-brand-blue shrink-0" size={16} />
-                    <span className="text-gray-600">Sliding Doors</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="text-brand-blue shrink-0" size={16} />
-                    <span className="text-gray-600">Frosted Options</span>
-                  </li>
-                </ul>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-soft border border-gray-100">
-                <h3 className="text-xl font-bold mb-3">Entry Systems</h3>
-                <p className="text-gray-600 mb-4">
-                  Our commercial glass entry systems combine functionality with elegant design, creating an inviting entrance for your customers and clients.
-                </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center gap-2">
-                    <Check className="text-brand-blue shrink-0" size={16} />
-                    <span className="text-gray-600">Single & Double Doors</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="text-brand-blue shrink-0" size={16} />
-                    <span className="text-gray-600">ADA Compliant Options</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="text-brand-blue shrink-0" size={16} />
-                    <span className="text-gray-600">Security Hardware</span>
-                  </li>
-                </ul>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-soft border border-gray-100">
-                <h3 className="text-xl font-bold mb-3">Security Glass</h3>
-                <p className="text-gray-600 mb-4">
-                  Protect your business with our security glass solutions, designed to withstand impact and provide enhanced safety for your property.
-                </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center gap-2">
-                    <Check className="text-brand-blue shrink-0" size={16} />
-                    <span className="text-gray-600">Tempered Glass</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="text-brand-blue shrink-0" size={16} />
-                    <span className="text-gray-600">Laminated Glass</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="text-brand-blue shrink-0" size={16} />
-                    <span className="text-gray-600">Break-Resistant Options</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            
-            <div className="bg-gray-50 p-8 rounded-lg border border-gray-100 mb-12">
-              <h3 className="text-2xl font-bold mb-6 text-center">Why Choose Glass Genius for Commercial Services</h3>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div className="text-center">
-                  <div className="flex items-center justify-center w-16 h-16 rounded-full bg-brand-blue/10 text-brand-blue mx-auto mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m14.5 9-5 5"/><path d="m9.5 9 5 5"/></svg>
-                  </div>
-                  <h4 className="text-lg font-bold mb-2">Quality Assurance</h4>
-                  <p className="text-gray-600">
-                    We use premium materials that meet industry standards.
-                  </p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="flex items-center justify-center w-16 h-16 rounded-full bg-brand-blue/10 text-brand-blue mx-auto mb-4">
-                    <Clock size={24} />
-                  </div>
-                  <h4 className="text-lg font-bold mb-2">Timely Completion</h4>
-                  <p className="text-gray-600">
-                    We understand that time is money for your business.
-                  </p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="flex items-center justify-center w-16 h-16 rounded-full bg-brand-blue/10 text-brand-blue mx-auto mb-4">
-                    <CircleDollarSign size={24} />
-                  </div>
-                  <h4 className="text-lg font-bold mb-2">Competitive Pricing</h4>
-                  <p className="text-gray-600">
-                    Quality commercial glass services at fair prices.
-                  </p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="flex items-center justify-center w-16 h-16 rounded-full bg-brand-blue/10 text-brand-blue mx-auto mb-4">
-                    <Shield size={24} />
-                  </div>
-                  <h4 className="text-lg font-bold mb-2">Licensed & Insured</h4>
-                  <p className="text-gray-600">
-                    Your business is protected with our coverage.
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Commercial Space?</h3>
-              <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-                Contact Glass Genius today for a free consultation and estimate for your commercial glass project. Our team is ready to provide expert solutions for your business.
+                Our storefront services include tempered glass, insulated glass, aluminum framing, and custom entrance systems.
               </p>
               <Button asChild className="bg-brand-blue hover:bg-brand-blue/90">
-                <Link to="/contact">Request a Free Estimate</Link>
+                <Link to="/services/storefront-glass">Learn More</Link>
+              </Button>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+            <div className="order-2 md:order-1">
+              <h3 className="text-2xl font-bold mb-4">Office Glass Partitions</h3>
+              <p className="text-gray-600 mb-4">
+                Create modern, open, and functional office spaces with our glass partition systems. Glass partitions allow 
+                natural light to flow throughout your office while providing acoustic privacy and defined workspace boundaries.
+              </p>
+              <p className="text-gray-600 mb-6">
+                We offer frameless glass walls, sliding door systems, and decorative glass options to match your office aesthetic.
+              </p>
+              <Button asChild className="bg-brand-blue hover:bg-brand-blue/90">
+                <Link to="/services/glass-partitions">Learn More</Link>
+              </Button>
+            </div>
+            <div className="order-1 md:order-2">
+              <img 
+                src="/lovable-uploads/97a20b32-0b00-444e-9b32-f920104ba35c.png" 
+                alt="Glass office partitions in modern workspace" 
+                className="rounded-lg shadow-md w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <img 
+                src="/lovable-uploads/97a20b32-0b00-444e-9b32-f920104ba35c.png" 
+                alt="Commercial glass door installation" 
+                className="rounded-lg shadow-md w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold mb-4">Commercial Glass Doors</h3>
+              <p className="text-gray-600 mb-4">
+                Enhance your business entrance with our stylish and secure commercial glass doors. We offer a variety of options 
+                including automatic doors, manual doors, sliding systems, and ADA-compliant solutions.
+              </p>
+              <p className="text-gray-600 mb-6">
+                All our commercial doors are built with safety, durability, and aesthetics in mind.
+              </p>
+              <Button asChild className="bg-brand-blue hover:bg-brand-blue/90">
+                <Link to="/services/glass-doors">Learn More</Link>
               </Button>
             </div>
           </div>
         </div>
       </section>
-      
-      {/* Contact Form Section */}
-      <section className="py-16 bg-gray-50">
+
+      <section className="py-12 bg-gray-50">
         <div className="container px-4 mx-auto">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold mb-4">Contact Us</h2>
-              <p className="text-gray-600">
-                Get in touch for commercial glass solutions that meet your business needs.
+          <div className="max-w-3xl mx-auto text-center mb-10">
+            <h2 className="text-3xl font-bold mb-4">Our Commercial Services</h2>
+            <p className="text-gray-600">
+              We offer a comprehensive range of commercial glass solutions to meet your business needs.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              "Storefront Glass Installation",
+              "Emergency Glass Repair",
+              "Glass Office Partitions",
+              "Commercial Glass Doors",
+              "Security Glass Solutions",
+              "Energy-Efficient Glass",
+              "Glass Railings",
+              "Glass Curtain Walls",
+              "Tempered & Safety Glass"
+            ].map((service, index) => (
+              <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="text-brand-blue h-5 w-5 mt-0.5 flex-shrink-0" />
+                  <span className="font-medium">{service}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-brand-dark text-white">
+        <div className="container px-4 mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold mb-4">Why Choose Glass Genius?</h2>
+              <p className="text-white/80 mb-6">
+                We're committed to providing exceptional commercial glass services with a focus on quality, 
+                reliability, and customer satisfaction.
               </p>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="text-brand-blue shrink-0 mt-1" size={18} />
+                  <span>Expert Commercial Installers</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="text-brand-blue shrink-0 mt-1" size={18} />
+                  <span>Quality Materials</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="text-brand-blue shrink-0 mt-1" size={18} />
+                  <span>Fast Response Times</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="text-brand-blue shrink-0 mt-1" size={18} />
+                  <span>Competitive Pricing</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="text-brand-blue shrink-0 mt-1" size={18} />
+                  <span>Fully Insured & Licensed</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="text-brand-blue shrink-0 mt-1" size={18} />
+                  <span>Satisfaction Guaranteed</span>
+                </div>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a 
+                  href="tel:+12409685060" 
+                  className="inline-flex items-center justify-center gap-2 py-3 px-6 bg-white text-brand-dark rounded-md font-medium hover:bg-gray-100 transition-colors"
+                >
+                  <Phone size={18} />
+                  <span>+1 240-968-5060</span>
+                </a>
+                
+                <Button asChild className="bg-brand-blue hover:bg-brand-blue/90">
+                  <Link to="/contact">Request a Quote</Link>
+                </Button>
+              </div>
             </div>
             
-            <ContactForm />
+            <div>
+              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
+                <div className="flex items-center gap-3 mb-4">
+                  <Building2 className="text-brand-blue h-8 w-8" />
+                  <h3 className="text-xl font-bold">Commercial Glass Experts</h3>
+                </div>
+                <p className="mb-6">
+                  Glass Genius has been serving commercial clients in Reston and surrounding areas for years. 
+                  We understand the unique challenges and requirements of commercial glass installations and repairs.
+                </p>
+                <p className="mb-6">
+                  Our team works efficiently to minimize disruption to your business operations while delivering 
+                  exceptional results that enhance your property's appearance, functionality, and security.
+                </p>
+                <p>
+                  Contact us today to discuss your commercial glass needs and receive a free, no-obligation quote.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -241,4 +243,4 @@ const Commercial = () => {
   );
 };
 
-export default Commercial;
+export default CommercialGlass;

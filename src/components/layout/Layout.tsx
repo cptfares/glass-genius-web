@@ -12,7 +12,8 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-grow">{children}</main>
+      {/* Adding padding-top to account for the fixed header */}
+      <main className="flex-grow pt-[148px] md:pt-[144px]">{children}</main>
       <Footer />
       <StickyPhoneButton />
     </div>
