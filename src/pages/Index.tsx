@@ -1,5 +1,4 @@
-
-import { Check, Building2, Home, Clock, Phone } from "lucide-react";
+import { Check, Building2, Home, Clock, Phone, PlayCircle } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import HeroSection from "@/components/home/HeroSection";
 import ServiceCard from "@/components/home/ServiceCard";
@@ -7,6 +6,7 @@ import ContactForm from "@/components/contact/ContactForm";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Seo from "@/components/seo/Seo";
+import VideoSection from "@/components/home/VideoSection";
 
 const Index = () => {
   const schema = {
@@ -111,6 +111,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+      
+      {/* Video Section */}
+      <VideoSection />
       
       {/* About Preview */}
       <section className="py-16">
