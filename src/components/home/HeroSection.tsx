@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -17,7 +16,7 @@ const HeroSection = ({
   title,
   subtitle,
   className,
-  imageUrl = "/lovable-uploads/97a20b32-0b00-444e-9b32-f920104ba35c.png",
+  imageUrl = "/img2.jpeg",
   buttonText = "Get a Free Estimate",
   buttonLink = "/contact",
   isSmall = false,
@@ -42,22 +41,30 @@ const HeroSection = ({
 
       {/* Content */}
       <div className="container px-4 mx-auto relative z-10 text-center">
-        <h1 className={cn(
-          "text-white font-bold",
-          isSmall ? "text-3xl md:text-4xl mb-4" : "text-4xl md:text-5xl lg:text-6xl mb-6"
-        )}>
+        <h1
+          className={cn(
+            "text-white font-bold",
+            isSmall
+              ? "text-3xl md:text-4xl mb-4"
+              : "text-4xl md:text-5xl lg:text-6xl mb-6"
+          )}
+        >
           {title}
         </h1>
-        
+
         {subtitle && (
-          <p className={cn(
-            "text-white/90 mx-auto",
-            isSmall ? "max-w-2xl text-lg mb-6" : "max-w-3xl text-xl md:text-2xl mb-8"
-          )}>
+          <p
+            className={cn(
+              "text-white/90 mx-auto",
+              isSmall
+                ? "max-w-2xl text-lg mb-6"
+                : "max-w-3xl text-xl md:text-2xl mb-8"
+            )}
+          >
             {subtitle}
           </p>
         )}
-        
+
         {buttonText && (
           <Button
             asChild

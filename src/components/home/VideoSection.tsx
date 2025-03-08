@@ -1,4 +1,3 @@
-
 import React, { useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { PlayCircle } from "lucide-react";
@@ -28,17 +27,20 @@ const VideoSection = () => {
           OUR WORK IN ACTION
         </h2>
       </div>
-      
+
       <div className="container px-4 mx-auto relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4">See Our Work in Action</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4">
+            See Our Work in Action
+          </h2>
           <p className="text-gray-600 text-sm sm:text-base">
-            Watch our skilled technicians transform spaces with expert glass installations and repairs.
+            Watch our skilled technicians transform spaces with expert glass
+            installations and repairs.
           </p>
         </div>
-        
+
         <div className="aspect-video rounded-lg overflow-hidden shadow-xl mx-auto relative bg-black max-w-full sm:max-w-lg md:max-w-2xl lg:max-w-4xl">
-          <video 
+          <video
             ref={videoRef}
             className="w-full h-full object-cover"
             playsInline
@@ -46,13 +48,12 @@ const VideoSection = () => {
             poster="/lovable-uploads/97a20b32-0b00-444e-9b32-f920104ba35c.png"
             onEnded={() => setIsPlaying(false)}
           >
-            <source src="/glass-installation.mov" type="video/quicktime" />
-            <source src="/glass-installation.mp4" type="video/mp4" />
+            <source src="/Video.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          
+
           {!isPlaying && (
-            <div 
+            <div
               className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/10 transition-colors cursor-pointer group"
               onClick={handlePlayPause}
             >
@@ -62,12 +63,12 @@ const VideoSection = () => {
             </div>
           )}
         </div>
-        
+
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mt-6 sm:mt-8 md:mt-10">
-          <Button 
-            asChild 
-            variant="outline" 
-            className="flex items-center gap-2 w-full sm:w-auto" 
+          <Button
+            asChild
+            variant="outline"
+            className="flex items-center gap-2 w-full sm:w-auto"
             size="lg"
           >
             <Link to="/portfolio">
@@ -75,10 +76,10 @@ const VideoSection = () => {
               <span className="text-sm sm:text-base">View More Videos</span>
             </Link>
           </Button>
-          
-          <Button 
-            asChild 
-            className="bg-brand-blue hover:bg-brand-blue/90 w-full sm:w-auto" 
+
+          <Button
+            asChild
+            className="bg-brand-blue hover:bg-brand-blue/90 w-full sm:w-auto"
             size="lg"
           >
             <Link to="/contact">
