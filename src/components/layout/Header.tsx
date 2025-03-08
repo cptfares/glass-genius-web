@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
@@ -12,24 +11,15 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 10);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
-  };
-
-  const closeMobileMenu = () => {
-    setMobileMenuOpen(false);
-  };
+  const toggleMobileMenu = () => setMobileMenuOpen((prev) => !prev);
+  const closeMobileMenu = () => setMobileMenuOpen(false);
 
   return (
     <header
@@ -51,7 +41,7 @@ const Header = () => {
           </NavLink>
         </div>
 
-        {/* Top contact bar */}
+        {/* Desktop Contact Bar */}
         <div className="hidden md:flex items-center gap-6 flex-grow justify-end">
           <a
             href="tel:+12409685060"
@@ -68,7 +58,7 @@ const Header = () => {
           </Button>
         </div>
 
-        {/* Mobile contact bar with smaller button */}
+        {/* Mobile Contact Bar */}
         <div className="flex md:hidden items-center gap-2">
           <a
             href="tel:+12409685060"
@@ -82,10 +72,8 @@ const Header = () => {
             size="sm"
             className="bg-brand-blue hover:bg-brand-blue/90 text-xs px-2 py-1 h-8"
           >
-            <NavLink to="/contact">Quote</NavLink>
+            <NavLink to="/contact">Get a Quote</NavLink>
           </Button>
-          
-          {/* Mobile menu toggle */}
           <button
             className="p-2 ml-2"
             onClick={toggleMobileMenu}
@@ -96,164 +84,71 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Navigation Links */}
+      {/* Desktop Navigation */}
       <nav className="hidden md:block border-t border-gray-100 mt-2 bg-white">
         <div className="container px-4 mx-auto">
           <ul className="flex justify-center space-x-8 py-3">
-            <li>
-              <NavLink
-                to="/"
-                className={({ isActive }) =>
-                  cn("nav-link", isActive && "active")
-                }
-              >
-                HOME
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/about"
-                className={({ isActive }) =>
-                  cn("nav-link", isActive && "active")
-                }
-              >
-                ABOUT US
-              </NavLink>
-            </li>
+            {[
+              { name: "HOME", to: "/" },
+              { name: "ABOUT US", to: "/about" },
+              { name: "24/7 EMERGENCY SERVICES", to: "/emergency" },
+              { name: "COMMERCIAL GLASS", to: "/commercial" },
+              { name: "RESIDENTIAL GLASS", to: "/residential" },
+              { name: "PORTFOLIO", to: "/portfolio" },
+              { name: "CONTACT US", to: "/contact" },
+            ].map((item) => (
+              <li key={item.to}>
+                <NavLink
+                  to={item.to}
+                  className={({ isActive }) =>
+                    cn("nav-link", isActive && "active")
+                  }
+                >
+                  {item.name}
+                </NavLink>
+              </li>
+            ))}
             <li>
               <ServicesDropdown />
-            </li>
-            <li>
-              <NavLink
-                to="/emergency"
-                className={({ isActive }) =>
-                  cn("nav-link", isActive && "active")
-                }
-              >
-                24/7 EMERGENCY SERVICES
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/commercial"
-                className={({ isActive }) =>
-                  cn("nav-link", isActive && "active")
-                }
-              >
-                COMMERCIAL GLASS
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/residential"
-                className={({ isActive }) =>
-                  cn("nav-link", isActive && "active")
-                }
-              >
-                RESIDENTIAL GLASS
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/portfolio"
-                className={({ isActive }) =>
-                  cn("nav-link", isActive && "active")
-                }
-              >
-                PORTFOLIO
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/contact"
-                className={({ isActive }) =>
-                  cn("nav-link", isActive && "active")
-                }
-              >
-                CONTACT US
-              </NavLink>
             </li>
           </ul>
         </div>
       </nav>
 
-      {/* Mobile menu */}
+      {/* Mobile Menu */}
       <div
         className={cn(
-          "fixed inset-0 bg-white z-40 transition-all duration-300 pt-20",
+          "fixed inset-0 bg-white z-40 transition-all duration-300 pt-20 overflow-y-auto max-h-screen",
           mobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         )}
       >
         <div className="container px-4 mx-auto">
           <ul className="flex flex-col gap-4">
-            <li>
-              <NavLink
-                to="/"
-                className="block py-2 text-lg font-medium border-b border-gray-100"
-                onClick={closeMobileMenu}
-              >
-                HOME
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/about"
-                className="block py-2 text-lg font-medium border-b border-gray-100"
-                onClick={closeMobileMenu}
-              >
-                ABOUT US
-              </NavLink>
-            </li>
+            {[
+              { name: "HOME", to: "/" },
+              { name: "ABOUT US", to: "/about" },
+              { name: "24/7 EMERGENCY SERVICES", to: "/emergency" },
+              { name: "COMMERCIAL GLASS", to: "/commercial" },
+              { name: "RESIDENTIAL GLASS", to: "/residential" },
+              { name: "PORTFOLIO", to: "/portfolio" },
+              { name: "CONTACT US", to: "/contact" },
+            ].map((item) => (
+              <li key={item.to}>
+                <NavLink
+                  to={item.to}
+                  className="block py-2 text-lg font-medium border-b border-gray-100"
+                  onClick={closeMobileMenu}
+                >
+                  {item.name}
+                </NavLink>
+              </li>
+            ))}
             <li>
               <ServicesDropdown isMobile onItemClick={closeMobileMenu} />
             </li>
-            <li>
-              <NavLink
-                to="/emergency"
-                className="block py-2 text-lg font-medium border-b border-gray-100"
-                onClick={closeMobileMenu}
-              >
-                24/7 EMERGENCY SERVICES
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/commercial"
-                className="block py-2 text-lg font-medium border-b border-gray-100"
-                onClick={closeMobileMenu}
-              >
-                COMMERCIAL GLASS
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/residential"
-                className="block py-2 text-lg font-medium border-b border-gray-100"
-                onClick={closeMobileMenu}
-              >
-                RESIDENTIAL GLASS
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/portfolio"
-                className="block py-2 text-lg font-medium border-b border-gray-100"
-                onClick={closeMobileMenu}
-              >
-                PORTFOLIO
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/contact"
-                className="block py-2 text-lg font-medium border-b border-gray-100"
-                onClick={closeMobileMenu}
-              >
-                CONTACT US
-              </NavLink>
-            </li>
           </ul>
 
+          {/* Contact Section in Mobile Menu */}
           <div className="mt-8 flex flex-col gap-4">
             <a
               href="tel:+12409685060"
