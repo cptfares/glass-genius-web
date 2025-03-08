@@ -75,7 +75,7 @@ const Header = () => {
             className="flex items-center gap-1 text-xs font-medium text-brand-dark"
           >
             <Phone size={14} className="text-brand-blue" />
-            <span className="sr-only md:not-sr-only">+1 240-968-5060</span>
+            <span>+1 240-968-5060</span>
           </a>
           <Button
             asChild
