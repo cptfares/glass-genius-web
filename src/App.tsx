@@ -13,6 +13,7 @@ import Residential from "./pages/Residential";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import Commercial from "./pages/Commercial";
 
 // Import service pages
 import GlassRepair from "./pages/services/GlassRepair";
@@ -100,6 +101,7 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="/emergency" element={<EmergencyServices />} />
             <Route path="/residential" element={<Residential />} />
+            <Route path="/commercial" element={<Commercial />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />
             

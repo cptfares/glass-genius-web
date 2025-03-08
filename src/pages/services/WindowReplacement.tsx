@@ -1,3 +1,4 @@
+
 import ServiceTemplate from "./ServiceTemplate";
 
 export default function WindowReplacement() {
@@ -5,7 +6,7 @@ export default function WindowReplacement() {
     <ServiceTemplate
       title="Window Replacement & Installation"
       description="Upgrade your property with energy-efficient window replacement and installation services from Glass Genius."
-      imageUrl="/img1.jpeg"
+      imageUrl="/img2.jpeg"
       features={[
         "Energy-efficient window options",
         "Variety of styles and designs available",

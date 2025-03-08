@@ -48,7 +48,7 @@ const CommercialGlass = () => {
       <HeroSection
         title="Commercial Glass Solutions"
         subtitle="Expert glass solutions for your business - from storefronts to interior glass partitions"
-        imageUrl="/lovable-uploads/97a20b32-0b00-444e-9b32-f920104ba35c.png"
+        imageUrl="/storefront.jpeg"
       />
 
       <section className="py-16">
@@ -65,7 +65,7 @@ const CommercialGlass = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <img 
-                src="/lovable-uploads/97a20b32-0b00-444e-9b32-f920104ba35c.png" 
+                src="/storefront.jpeg" 
                 alt="Commercial glass installation for storefront" 
                 className="rounded-lg shadow-md w-full h-full object-cover"
               />
@@ -101,7 +101,7 @@ const CommercialGlass = () => {
             </div>
             <div className="order-1 md:order-2">
               <img 
-                src="/lovable-uploads/97a20b32-0b00-444e-9b32-f920104ba35c.png" 
+                src="/office.jpeg" 
                 alt="Glass office partitions in modern workspace" 
                 className="rounded-lg shadow-md w-full h-full object-cover"
               />
@@ -111,7 +111,7 @@ const CommercialGlass = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <img 
-                src="/lovable-uploads/97a20b32-0b00-444e-9b32-f920104ba35c.png" 
+                src="/slidingdoor.jpg" 
                 alt="Commercial glass door installation" 
                 className="rounded-lg shadow-md w-full h-full object-cover"
               />

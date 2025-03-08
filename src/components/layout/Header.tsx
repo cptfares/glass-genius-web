@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
@@ -40,7 +41,7 @@ const Header = () => {
       <div className="container px-4 mx-auto flex justify-between items-center">
         <div className="flex items-center flex-shrink-0">
           <NavLink to="/" onClick={closeMobileMenu}>
-            <div className="hidden md:flex items-center gap-3">
+            <div className="flex items-center gap-3">
               <img
                 src="/lovable-uploads/f3ed474e-96f2-47b8-9787-ca848f2477f4.png"
                 alt="Glass Genius Logo"
@@ -69,7 +70,7 @@ const Header = () => {
 
         {/* Mobile menu toggle */}
         <button
-          className="p-2"
+          className="p-2 md:hidden"
           onClick={toggleMobileMenu}
           aria-label="Toggle menu"
         >
