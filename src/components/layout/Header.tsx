@@ -52,7 +52,7 @@ const Header = () => {
         </div>
 
         {/* Top contact bar */}
-        <div className="flex items-center gap-6 flex-grow justify-end">
+        <div className="hidden md:flex items-center gap-6 flex-grow justify-end">
           <a
             href="tel:+12409685060"
             className="flex items-center gap-2 text-sm md:text-base font-medium text-brand-dark hover:text-brand-blue transition-all-200 whitespace-nowrap"
@@ -68,14 +68,32 @@ const Header = () => {
           </Button>
         </div>
 
-        {/* Mobile menu toggle */}
-        <button
-          className="p-2 md:hidden"
-          onClick={toggleMobileMenu}
-          aria-label="Toggle menu"
-        >
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile contact bar with smaller button */}
+        <div className="flex md:hidden items-center gap-2">
+          <a
+            href="tel:+12409685060"
+            className="flex items-center gap-1 text-xs font-medium text-brand-dark"
+          >
+            <Phone size={14} className="text-brand-blue" />
+            <span className="sr-only md:not-sr-only">+1 240-968-5060</span>
+          </a>
+          <Button
+            asChild
+            size="sm"
+            className="bg-brand-blue hover:bg-brand-blue/90 text-xs px-2 py-1 h-8"
+          >
+            <NavLink to="/contact">Quote</NavLink>
+          </Button>
+          
+          {/* Mobile menu toggle */}
+          <button
+            className="p-2 ml-2"
+            onClick={toggleMobileMenu}
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Navigation Links */}
