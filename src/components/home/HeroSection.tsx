@@ -16,7 +16,7 @@ const HeroSection = ({
   title,
   subtitle,
   className,
-  imageUrl = "/img2.jpeg",
+  imageUrl = "/IMG_6828.png",
   buttonText = "Get a Free Estimate",
   buttonLink = "/contact",
   isSmall = false,

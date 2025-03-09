@@ -11,21 +11,21 @@ const portfolioProjects = [
     category: "Commercial",
     description:
       "Complete storefront glass installation for a retail business in Reston, featuring tempered safety glass and aluminum framing.",
-    image: "/storefront.jpeg",
+    image: "/IMG_8610.png",
   },
   {
     title: "Frameless Shower Enclosure",
     category: "Residential",
     description:
       "Elegant frameless shower enclosure with custom glass doors for a master bathroom renovation in Vienna.",
-    image: "/shower.jpeg",
+    image: "/image0.jpeg",
   },
   {
     title: "Office Partition Walls",
     category: "Commercial",
     description:
       "Glass partition walls for a modern office space in Tysons, creating separate meeting rooms while maintaining an open feel.",
-    image: "/office.jpeg",
+    image: "/IMG_8608.png",
   },
   {
     title: "Sliding Glass Door System",
@@ -39,14 +39,14 @@ const portfolioProjects = [
     category: "Commercial",
     description:
       "Complete glass storefront renovation for a restaurant in Fairfax, enhancing curb appeal and energy efficiency.",
-    image: "/restofront.jpg",
+    image: "/IMG_8538.png",
   },
   {
     title: "Custom Mirror Wall",
     category: "Residential",
     description:
       "Custom-designed mirror wall for a home gym in Great Falls, creating a sense of spaciousness and functionality.",
-    image: "/gymmirror.jpg",
+    image: "/IMG_6588.png",
   },
 ];
 

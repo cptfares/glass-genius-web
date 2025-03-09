@@ -5,7 +5,7 @@ export default function ShowerEnclosures() {
     <ServiceTemplate
       title="Custom Shower Enclosures & Doors"
       description="Transform your bathroom with beautiful, custom shower enclosures and doors from Glass Genius."
-      imageUrl="/shower.jpeg"
+      imageUrl="/image2.jpeg"
       features={[
         "Custom designs tailored to your space",
         "Frameless, semi-frameless, and framed options",

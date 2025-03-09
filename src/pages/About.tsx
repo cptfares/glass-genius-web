@@ -48,7 +48,7 @@ const About = () => {
       <div className="relative bg-brand-dark">
         <div className="absolute inset-0 z-0 opacity-20">
           <img
-            src="/img4.jpeg"
+            src="/IMG_8354.png"
             alt="Glass Genius technicians working on a professional glass installation"
             className="w-full h-full object-cover"
           />
