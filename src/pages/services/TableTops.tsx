@@ -1,4 +1,3 @@
-
 import ServiceTemplate from "./ServiceTemplate";
 import Seo from "@/components/seo/Seo";
 
@@ -6,65 +5,63 @@ export default function TableTops() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    serviceType: "Glass Table Tops",
+    serviceType: "Glass Partitions",
     provider: {
       "@type": "LocalBusiness",
-      name: "Glass Genius",
+      name: "Liberty Glass and Doors",
       address: {
         "@type": "PostalAddress",
-        addressLocality: "Reston",
-        addressRegion: "VA",
-        postalCode: "20190",
+        addressLocality: "Washington D.C.",
+        addressRegion: "DC",
+        postalCode: "20001",
         addressCountry: "US",
       },
-      telephone: "+12409685060",
+      telephone: "+12025501101",
     },
-    areaServed: "DMV (D.C., Maryland, Virginia)",
+    areaServed: "Washington D.C., Maryland, Virginia",
   };
 
   return (
     <>
       <Seo
-        title="Custom Glass Table Tops | Glass Genius"
-        description="Protect and beautify your furniture with custom glass table tops from Glass Genius. Serving the DMV (D.C., Maryland, Virginia) region with quality glass solutions."
-        canonicalUrl="/services/table-tops"
+        title="Frameless Glass Wall Partitions | Liberty Glass and Doors"
+        description="Enhance your home or office with stylish and functional frameless glass wall partitions. Call now for a free quote! (202) 550-1101."
+        canonicalUrl="/services/glass-partitions"
         schema={schema}
       />
       <ServiceTemplate
-        title="Custom Glass Table Tops"
-        imageUrl="/placeholder.svg"
-        description="Protect and enhance your furniture with custom glass table tops designed and installed throughout the DMV region."
+        title="Frameless Glass Wall Partitions"
+        imageUrl="/IMG_8354.png"
+        description="Liberty Glass and Doors provides premium glass wall partitions and dividers, offering stylish solutions for both residential and commercial spaces."
         features={[
-          "Custom cut to any size or shape",
-          "Variety of glass thicknesses available",
-          "Beveled, polished, or flat edge options",
-          "Clear, frosted, or tinted glass options",
-          "Tempered glass for safety and durability",
-          "Protection for wood furniture",
-          "Easy cleaning and maintenance",
+          "Frameless and framed glass partition systems",
+          "Glass wall dividers and custom glass doors",
+          "Office partitions and conference room enclosures",
+          "Sliding and moveable glass wall systems",
+          "Frosted and decorative glass options",
+          "Acoustic glass for sound insulation",
+          "Commercial and residential installations",
+          "Professional installation with minimal disruption",
         ]}
         content={
           <>
             <p>
-              Add elegance and protection to your furniture with custom glass 
-              table tops from Glass Genius. We design and fabricate glass tops 
-              for dining tables, coffee tables, end tables, desks, and more 
-              across Washington D.C., Maryland, and Northern Virginia.
+              If you want to create an open and modern look for your space while
+              maintaining separation, glass wall partitions are the perfect
+              solution. Liberty Glass and Doors specializes in high-quality
+              glass partition installations for homes and offices.
             </p>
             <p className="mt-4">
-              Our glass table tops are available in a variety of thicknesses, 
-              with different edge treatments including flat polished, beveled, 
-              and pencil polish. We can create custom shapes, including round, 
-              oval, rectangular, or even irregular designs to match your 
-              specific furniture.
+              Our glass partition solutions help businesses create stylish,
+              functional office spaces that enhance collaboration while
+              maintaining privacy. In residential settings, they provide elegant
+              room divisions without blocking natural light.
             </p>
             <p className="mt-4">
-              Each glass table top is precisely measured and cut to ensure a 
-              perfect fit. We offer tempered glass options for added safety 
-              and durability. A custom glass top not only enhances the appearance 
-              of your furniture but also provides protection against spills, 
-              scratches, heat marks, and other damage, extending the life of 
-              your valuable pieces throughout the DMV area.
+              We offer a variety of glass options, including clear, frosted, and
+              decorative designs, ensuring the perfect balance between openness
+              and privacy. Our moveable glass wall systems also provide
+              flexibility for spaces that require adaptable layouts.
             </p>
           </>
         }

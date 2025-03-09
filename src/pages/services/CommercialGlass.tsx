@@ -1,4 +1,3 @@
-
 import ServiceTemplate from "./ServiceTemplate";
 import Seo from "@/components/seo/Seo";
 
@@ -6,66 +5,64 @@ export default function CommercialGlass() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    serviceType: "Commercial Glass Services",
+    serviceType: "Commercial Glass Replacement & Installation Services",
     provider: {
       "@type": "LocalBusiness",
-      name: "Glass Genius",
+      name: "Liberty Glass and Doors",
       address: {
         "@type": "PostalAddress",
-        addressLocality: "Reston",
-        addressRegion: "VA",
-        postalCode: "20190",
+        addressLocality: "Washington D.C.",
+        addressRegion: "DC",
+        postalCode: "20001",
         addressCountry: "US",
       },
-      telephone: "+12409685060",
+      telephone: "+12025501101",
     },
-    areaServed: "DMV (D.C., Maryland, Virginia)",
+    areaServed: "Washington D.C., Maryland, Virginia",
   };
 
   return (
     <>
       <Seo
-        title="Commercial Glass Solutions | Glass Genius"
-        description="Complete commercial glass services for businesses throughout the DMV (D.C., Maryland, Virginia) region. From storefronts to interior glass, Glass Genius delivers quality solutions."
+        title="Commercial Glass Replacement & Installation | Liberty Glass and Doors"
+        description="Professional commercial glass replacement and installation services, including high-rise window glass replacement, storefront installation, and emergency glass repair."
         canonicalUrl="/services/commercial-glass"
         schema={schema}
       />
       <ServiceTemplate
-        title="Commercial Glass Solutions"
-        imageUrl="/storefront.jpeg"
-        description="Complete commercial glass services for businesses throughout the DMV region. From storefronts to interior glass, we deliver quality solutions."
+        title="Commercial Glass Replacement & Installation Services"
+        imageUrl="/IMG_8564.png"
+        description="Liberty Glass and Doors provides top-tier commercial glass replacement and installation services, ensuring security and aesthetic appeal for businesses across Washington D.C., Maryland, and Virginia."
         features={[
-          "Storefront design and installation",
-          "Commercial door repair and replacement",
-          "Interior glass walls and partitions",
-          "Glass conference rooms and offices",
-          "Safety and security glass options",
-          "Energy-efficient glass solutions",
-          "ADA-compliant door systems",
+          "High-rise window glass replacement",
+          "Storefront installation",
+          "Bullet-proof glass installation",
+          "Curtain wall glass glazing",
+          "Same-day glass replacement",
+          "Tempered glass installation",
           "Emergency commercial glass repair",
+          "Commercial window installation",
         ]}
         content={
           <>
             <p>
-              Glass Genius provides comprehensive commercial glass services for 
-              businesses of all sizes across Washington D.C., Northern Virginia, and Maryland. 
-              We understand that commercial glass not only affects your property's 
-              appearance but also its security, energy efficiency, and functionality.
+              Liberty Glass and Doors offers comprehensive commercial glass
+              repair and installation services. Our team specializes in
+              high-rise window replacements, storefront glass installations, and
+              emergency repairs to maintain the security and aesthetics of your
+              business.
             </p>
             <p className="mt-4">
-              Our commercial glass services include storefront design and 
-              installation, door repair and replacement, curtain walls, interior 
-              glass partitions, safety glazing, and more. We work with architects, 
-              contractors, and business owners to implement glass solutions that 
-              meet your specific requirements and budget.
+              We understand that well-maintained doors and glass are crucial for
+              any commercial building. From enhancing security to leaving a
+              positive first impression, our services ensure your business
+              remains safe and visually appealing.
             </p>
             <p className="mt-4">
-              With our experienced team and high-quality materials, we ensure 
-              that every commercial glass project is completed to the highest 
-              standards. From small retail shops to large office buildings, 
-              Glass Genius has the expertise to handle commercial glass projects 
-              of any scale throughout the DMV region. We also offer 24/7 emergency 
-              services for urgent commercial glass repairs.
+              Our expert glaziers provide 24/7 emergency commercial glass
+              replacement, ensuring fast and reliable service when you need it
+              most. Whether it’s a cracked storefront window or a shattered
+              glass door, we are here to help with prompt solutions.
             </p>
           </>
         }

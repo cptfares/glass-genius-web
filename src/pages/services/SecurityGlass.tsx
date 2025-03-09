@@ -1,4 +1,3 @@
-
 import ServiceTemplate from "./ServiceTemplate";
 import Seo from "@/components/seo/Seo";
 
@@ -6,67 +5,63 @@ export default function SecurityGlass() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    serviceType: "Security Glass",
+    serviceType: "Foggy Glass Replacement",
     provider: {
       "@type": "LocalBusiness",
-      name: "Glass Genius",
+      name: "Liberty Glass and Doors",
       address: {
         "@type": "PostalAddress",
-        addressLocality: "Reston",
-        addressRegion: "VA",
-        postalCode: "20190",
+        addressLocality: "Washington D.C.",
+        addressRegion: "DC",
+        postalCode: "20001",
         addressCountry: "US",
       },
-      telephone: "+12409685060",
+      telephone: "+12025501101",
     },
-    areaServed: "DMV (D.C., Maryland, Virginia)",
+    areaServed: "Washington D.C., Maryland, Virginia",
   };
 
   return (
     <>
       <Seo
-        title="Security Glass Solutions | Glass Genius"
-        description="Enhance protection for your property with security glass solutions from Glass Genius. Serving the DMV (D.C., Maryland, Virginia) region with advanced glass security options."
-        canonicalUrl="/services/security-glass"
+        title="Foggy Glass Replacement | Liberty Glass and Doors"
+        description="Affordable foggy glass repair and replacement services in Washington D.C., Maryland, and Virginia. Call now for a free quote! (202) 550-1101."
+        canonicalUrl="/services/foggy-glass-replacement"
         schema={schema}
       />
       <ServiceTemplate
-        title="Security Glass Solutions"
-        imageUrl="/placeholder.svg"
-        description="Enhance protection for your property with security glass solutions throughout the DMV region."
+        title="Foggy Glass Replacement"
+        imageUrl="/IMG_7398.png"
+        description="Liberty Glass and Doors provides expert foggy glass repair and replacement services, restoring clarity and efficiency to your windows."
         features={[
-          "Laminated security glass options",
-          "Bullet-resistant glass systems",
-          "Forced entry protection",
-          "Security film installation",
-          "Residential and commercial applications",
-          "Custom solutions based on security needs",
-          "Professional installation and certification",
-          "Improved protection without sacrificing aesthetics",
+          "Foggy window glass replacement",
+          "Sliding window glass repair",
+          "Dual and triple-pane glass restoration",
+          "Sealed unit failure repair",
+          "Energy-efficient glass solutions",
+          "Residential and commercial services",
+          "Custom glass replacement",
+          "Professional installation and quick turnaround",
         ]}
         content={
           <>
             <p>
-              Glass Genius provides advanced security glass solutions for homes 
-              and businesses across Washington D.C., Northern Virginia, and Maryland that 
-              require enhanced protection. Our security glass products offer 
-              resistance to forced entry, ballistic impacts, and other security threats 
-              while maintaining visual appeal.
+              Got foggy windows? Window seal failure is a common issue for aging
+              insulated glass (dual or triple pane) in residential and
+              commercial buildings. When the seal breaks, moisture seeps in,
+              causing condensation and a foggy appearance.
             </p>
             <p className="mt-4">
-              We offer various security glass options, including laminated glass 
-              that holds together when shattered, tempered glass with increased 
-              strength, and specialized security glass systems designed for 
-              specific threat levels. We also provide security window films that 
-              can be applied to existing glass to improve its security performance.
+              Liberty Glass and Doors specializes in restoring clarity and
+              energy efficiency by replacing failed insulated glass units.
+              Whether you need foggy glass repair for a sliding window or a full
+              replacement for your home or office, our expert team provides
+              top-tier service.
             </p>
             <p className="mt-4">
-              Our security glass experts will assess your specific needs and 
-              recommend the appropriate solutions for your property. Whether you're 
-              protecting a retail storefront, securing a residential property, or 
-              meeting specialized security requirements for a commercial facility, 
-              Glass Genius has the expertise to implement effective security glass 
-              solutions throughout the DMV region.
+              We offer durable and energy-efficient glass replacement solutions
+              tailored to your needs. Contact us today to restore the clarity of
+              your windows!
             </p>
           </>
         }

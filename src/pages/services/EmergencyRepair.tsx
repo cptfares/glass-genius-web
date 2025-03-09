@@ -1,4 +1,3 @@
-
 import ServiceTemplate from "./ServiceTemplate";
 import Seo from "@/components/seo/Seo";
 
@@ -39,7 +38,7 @@ export default function EmergencyRepair() {
       />
       <ServiceTemplate
         title="24/7 Emergency Glass Repair"
-        imageUrl="/img5.jpeg"
+        imageUrl="/slidingdoor.jpg"
         description="Fast response when you need it most. We provide emergency glass repair services around the clock for residential and commercial properties throughout the DMV region."
         features={[
           "Available 24 hours a day, 7 days a week",
@@ -54,25 +53,26 @@ export default function EmergencyRepair() {
         content={
           <>
             <p>
-              Glass emergencies don't wait for business hours. That's why 
-              Glass Genius provides 24/7 emergency glass repair services 
-              throughout Washington D.C., Northern Virginia, and Maryland. Whether it's a 
-              broken storefront window, shattered home glass, or any glass 
+              Glass emergencies don't wait for business hours. That's why Glass
+              Genius provides 24/7 emergency glass repair services throughout
+              Washington D.C., Northern Virginia, and Maryland. Whether it's a
+              broken storefront window, shattered home glass, or any glass
               emergency, our team is ready to respond quickly.
             </p>
             <p className="mt-4">
-              Our emergency glass repair services include immediate boarding up 
-              to secure your property, followed by permanent glass replacement as 
-              soon as possible. We handle all types of emergency situations, from 
-              break-ins and vandalism to weather damage and accidents.
+              Our emergency glass repair services include immediate boarding up
+              to secure your property, followed by permanent glass replacement
+              as soon as possible. We handle all types of emergency situations,
+              from break-ins and vandalism to weather damage and accidents.
             </p>
             <p className="mt-4">
-              When you call our emergency line, you'll speak with a glass 
-              professional who will dispatch a technician to your location as 
-              quickly as possible. Our emergency team arrives equipped with the 
-              tools and materials needed to secure your property and assess the 
-              damage. We work efficiently to minimize disruption and restore 
-              safety and security to your home or business throughout the DMV region.
+              When you call our emergency line, you'll speak with a glass
+              professional who will dispatch a technician to your location as
+              quickly as possible. Our emergency team arrives equipped with the
+              tools and materials needed to secure your property and assess the
+              damage. We work efficiently to minimize disruption and restore
+              safety and security to your home or business throughout the DMV
+              region.
             </p>
           </>
         }

@@ -1,4 +1,3 @@
-
 import ServiceTemplate from "./ServiceTemplate";
 import Seo from "@/components/seo/Seo";
 
@@ -32,7 +31,7 @@ export default function MirrorInstallation() {
       />
       <ServiceTemplate
         title="Custom Mirror Installation"
-        imageUrl="/img6.jpeg"
+        imageUrl="/IMG_6588.png"
         description="Enhance your home or business with custom mirrors installed by Glass Genius throughout the DMV region."
         features={[
           "Custom-cut mirrors for any space",
@@ -46,23 +45,25 @@ export default function MirrorInstallation() {
         content={
           <>
             <p>
-              Glass Genius offers professional mirror installation services for both
-              residential and commercial properties across Washington D.C., Northern Virginia, 
-              and Maryland. Our custom mirrors are designed to enhance the beauty and 
-              functionality of any space, from bathroom vanities to full gym walls.
+              Glass Genius offers professional mirror installation services for
+              both residential and commercial properties across Washington D.C.,
+              Northern Virginia, and Maryland. Our custom mirrors are designed
+              to enhance the beauty and functionality of any space, from
+              bathroom vanities to full gym walls.
             </p>
             <p className="mt-4">
-              We work with you to select the perfect mirror style, size, and 
-              installation method for your specific needs. Our options include 
-              beveled edges, custom shapes, antique finishes, and framed or 
+              We work with you to select the perfect mirror style, size, and
+              installation method for your specific needs. Our options include
+              beveled edges, custom shapes, antique finishes, and framed or
               frameless designs to complement your interior decor.
             </p>
             <p className="mt-4">
-              Our experienced technicians ensure that every mirror is precisely 
-              measured, carefully cut, and professionally installed with proper 
-              mounting hardware. We understand the importance of secure installation, 
-              especially for larger mirrors, and take every precaution to ensure 
-              safety and longevity for homes and businesses throughout the DMV region.
+              Our experienced technicians ensure that every mirror is precisely
+              measured, carefully cut, and professionally installed with proper
+              mounting hardware. We understand the importance of secure
+              installation, especially for larger mirrors, and take every
+              precaution to ensure safety and longevity for homes and businesses
+              throughout the DMV region.
             </p>
           </>
         }

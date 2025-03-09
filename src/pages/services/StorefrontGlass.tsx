@@ -1,69 +1,96 @@
-
 import ServiceTemplate from "./ServiceTemplate";
 import Seo from "@/components/seo/Seo";
 
-export default function StorefrontGlass() {
+export default function GlassRepair() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Service",
     serviceType: "Storefront Glass Installation",
     provider: {
       "@type": "LocalBusiness",
-      name: "Glass Genius",
+      name: "Liberty Glass and Doors",
       address: {
         "@type": "PostalAddress",
-        addressLocality: "Reston",
-        addressRegion: "VA",
-        postalCode: "20190",
+        addressLocality: "Washington DC, Maryland & Virginia",
+        addressRegion: "DC, MD, VA",
         addressCountry: "US",
       },
-      telephone: "+12409685060",
+      telephone: "(202) 550-1101",
     },
-    areaServed: "DMV (D.C., Maryland, Virginia)",
+    offers: {
+      "@type": "Offer",
+      price: "0.00",
+      priceCurrency: "USD",
+      description: "Free estimates for storefront glass installation",
+    },
   };
 
   return (
     <>
       <Seo
-        title="Commercial Storefront Glass Installation | Glass Genius"
-        description="Professional storefront glass installation services for businesses throughout the DMV (D.C., Maryland, Virginia) region. Enhance your business presence with custom glass solutions."
+        title="Storefront Glass Installation | Liberty Glass and Doors"
+        description="Professional storefront glass installation services for businesses in Washington DC, Maryland, and Virginia. Call now for a free estimate!"
         canonicalUrl="/services/storefront-glass"
         schema={schema}
       />
       <ServiceTemplate
-        title="Storefront Glass Installation"
-        imageUrl="/storefront.jpeg"
-        description="Enhance your business's appeal with custom storefront glass installations throughout the DMV region."
+        title="Storefront & Entrances Installation"
+        description="Expert installation of storefront doors, windows, and curtain wall systems across the DMV region. Call now for a free estimate!"
+        imageUrl="/IMG_8610.png"
         features={[
-          "Custom storefront entrance systems",
-          "Tempered glass storefronts",
-          "Aluminum framing systems",
-          "ADA-compliant door installations",
-          "Energy-efficient glass options",
-          "Emergency repair and replacement",
-          "Display window installation and repair",
+          "Storefront Doors & Windows",
+          "Exterior Curtain Wall System Installation",
+          "Office Glass Doors",
+          "Automatic Sliding & Swing Doors",
+          "Door Closures, Hinges, Panic Exit Device & Automatic Operators",
+          "Bullet Proof Glass & Security Glass Installation",
+          "Custom Aluminum Framing Systems",
         ]}
         content={
           <>
-            <p>
-              Glass Genius specializes in designing and installing high-quality storefront 
-              glass solutions for businesses throughout Washington D.C., Maryland, and 
-              Northern Virginia. Our storefront glass systems not only enhance your 
-              business visibility but also provide security and durability.
-            </p>
-            <p className="mt-4">
-              We offer a variety of options including clear, tinted, or frosted glass, 
-              with aluminum framing in various finishes. Our installations are designed 
-              for longevity and comply with all commercial building requirements across 
-              the DMV region, including energy-efficiency standards and safety codes.
-            </p>
-            <p className="mt-4">
-              Our professional team handles the entire process, from consultation and 
-              accurate measurements to expert installation and cleanup. We can work around 
-              your business hours to minimize disruption, ensuring your new storefront 
-              glass creates the perfect impression for your customers while maintaining 
-              the functionality and security your business needs.
-            </p>
+            <section>
+              <h2 className="text-xl font-bold mt-6">
+                High-Quality Storefront Glass Solutions
+              </h2>
+              <p className="mt-4">
+                Liberty Glass and Doors provides top-notch glass door
+                installations for various businesses in Virginia, Washington DC,
+                and Maryland. Our professional installers ensure that each glass
+                panel is perfectly fitted within its frame, offering both
+                aesthetic appeal and functional durability.
+              </p>
+              <p className="mt-4">
+                Our storefront glass installations not only enhance business
+                visibility but also provide security and weather resistance. We
+                specialize in aluminum-framed glass solutions, automatic doors,
+                and energy-efficient glass options tailored to your needs.
+              </p>
+            </section>
+
+            <section className="mt-6">
+              <h2 className="text-xl font-bold">Our Specialties</h2>
+              <ul className="list-disc pl-5 mt-2">
+                <li>Aluminum Storefront Installation</li>
+                <li>Commercial Glass Doors & Entrances</li>
+                <li>Bifold Doors</li>
+                <li>Curtain Wall Glazing</li>
+                <li>Bullet Proof Glass</li>
+                <li>Metal Doors Replacement</li>
+                <li>Automatic Door Installation</li>
+                <li>Storefront Doors Replacement</li>
+                <li>Door Hinges, Pivots, Closers & Panic Exit Devices</li>
+              </ul>
+            </section>
+
+            <section className="mt-6">
+              <h2 className="text-xl font-bold">Get a Free Estimate</h2>
+              <p className="mt-4">
+                If you have a cracked, broken, or outdated glass storefront, our
+                experienced team is ready to assist you. We offer 24/7 emergency
+                glass replacement services to ensure your business remains
+                secure and visually appealing.
+              </p>
+            </section>
           </>
         }
       />
