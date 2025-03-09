@@ -1,3 +1,4 @@
+
 import React from "react";
 import Layout from "@/components/layout/Layout";
 import { CalendarClock, Shield, Ban, Truck, Clock, Phone } from "lucide-react";
@@ -35,7 +36,7 @@ const EmergencyServices = () => {
         latitude: 38.9586,
         longitude: -77.357,
       },
-      geoRadius: "32000",
+      geoRadius: "80000",
     },
     hoursAvailable: "Mo-Su 00:00-24:00",
   };
@@ -44,7 +45,7 @@ const EmergencyServices = () => {
     <Layout>
       <Seo
         title="24/7 Emergency Glass Repair Services | Glass Genius"
-        description="Fast response when you need it most. We provide emergency glass repair services around the clock for residential and commercial properties in Reston, VA and surrounding areas."
+        description="Fast response when you need it most. We provide emergency glass repair services around the clock for residential and commercial properties throughout the DMV (D.C., Maryland, Virginia) region."
         canonicalUrl="/emergency"
         schema={schema}
       />
@@ -101,7 +102,7 @@ const EmergencyServices = () => {
           <p className="text-lg text-gray-700 mb-8">
             Glass emergencies don't wait for business hours. That's why Glass
             Genius provides 24/7 emergency glass repair services throughout
-            Reston, Virginia and surrounding areas. Whether it's a broken
+            the DMV (D.C., Maryland, Virginia) region. Whether it's a broken
             storefront window, shattered home glass, or any glass emergency, our
             team is ready to respond quickly.
           </p>
@@ -191,7 +192,7 @@ const EmergencyServices = () => {
               Emergency Glass Services Hotline
             </h3>
             <p className="text-lg mb-6">
-              Our emergency response team is standing by 24/7 to assist you.
+              Our emergency response team is standing by 24/7 to assist you throughout the DMV region.
             </p>
             <a
               href="tel:+12409685060"

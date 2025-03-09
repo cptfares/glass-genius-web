@@ -56,7 +56,7 @@ const Contact = () => {
                   <div>
                     <h3 className="text-lg font-bold mb-1">Service Area</h3>
                     <p className="text-gray-600">
-                      Serving Reston, Virginia and a 20-mile radius
+                      Serving the entire DMV (D.C., Maryland, Virginia) region
                     </p>
                   </div>
                 </div>
@@ -82,26 +82,26 @@ const Contact = () => {
               
               <h3 className="text-xl font-bold mb-4">Our Service Areas</h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-sm">
-                <span className="text-gray-600">Reston</span>
-                <span className="text-gray-600">Herndon</span>
-                <span className="text-gray-600">Vienna</span>
-                <span className="text-gray-600">Tysons</span>
-                <span className="text-gray-600">Falls Church</span>
-                <span className="text-gray-600">Fairfax</span>
-                <span className="text-gray-600">Ashburn</span>
-                <span className="text-gray-600">Sterling</span>
-                <span className="text-gray-600">Chantilly</span>
-                <span className="text-gray-600">McLean</span>
-                <span className="text-gray-600">Oakton</span>
-                <span className="text-gray-600">Great Falls</span>
-                <span className="text-gray-600">Centreville</span>
-                <span className="text-gray-600">Manassas</span>
-                <span className="text-gray-600">Annandale</span>
-                <span className="text-gray-600">Springfield</span>
-                <span className="text-gray-600">Burke</span>
-                <span className="text-gray-600">Lorton</span>
-                <span className="text-gray-600">Woodbridge</span>
-                <span className="text-gray-600">Leesburg</span>
+                <span className="text-gray-600">Washington, D.C.</span>
+                <span className="text-gray-600">Arlington, VA</span>
+                <span className="text-gray-600">Alexandria, VA</span>
+                <span className="text-gray-600">Fairfax, VA</span>
+                <span className="text-gray-600">Loudoun County, VA</span>
+                <span className="text-gray-600">Prince William, VA</span>
+                <span className="text-gray-600">Montgomery County, MD</span>
+                <span className="text-gray-600">Prince George's, MD</span>
+                <span className="text-gray-600">Howard County, MD</span>
+                <span className="text-gray-600">Reston, VA</span>
+                <span className="text-gray-600">Herndon, VA</span>
+                <span className="text-gray-600">Vienna, VA</span>
+                <span className="text-gray-600">Tysons, VA</span>
+                <span className="text-gray-600">Falls Church, VA</span>
+                <span className="text-gray-600">Ashburn, VA</span>
+                <span className="text-gray-600">Sterling, VA</span>
+                <span className="text-gray-600">Chantilly, VA</span>
+                <span className="text-gray-600">McLean, VA</span>
+                <span className="text-gray-600">Great Falls, VA</span>
+                <span className="text-gray-600">Centreville, VA</span>
               </div>
             </div>
             
@@ -118,7 +118,7 @@ const Contact = () => {
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-6">Need Glass Services?</h2>
             <p className="text-gray-600 mb-8">
-              Whether you need emergency glass repair, custom glass installation, or consultation for your commercial or residential property, we're here to help. Contact us today for a free estimate and expert service.
+              Whether you need emergency glass repair, custom glass installation, or consultation for your commercial or residential property, we're here to help. Contact us today for a free estimate and expert service throughout the DMV region.
             </p>
             <div className="flex justify-center">
               <a 

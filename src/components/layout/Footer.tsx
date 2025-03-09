@@ -12,7 +12,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Glass Genius Glass Repair</h3>
             <p className="text-gray-300 mb-6">
-              Expert glass repair services for residential and commercial properties in Reston, Virginia and surrounding areas. No job is too big or too small for us.
+              Expert glass repair services for residential and commercial properties in the DMV (D.C., Maryland, Virginia) region. No job is too big or too small for us.
             </p>
             <div className="flex items-center gap-3 mb-3">
               <Phone size={18} className="text-brand-blue" />
@@ -29,7 +29,7 @@ const Footer = () => {
             <div className="flex items-start gap-3">
               <MapPin size={18} className="text-brand-blue shrink-0 mt-1" />
               <p className="text-gray-300">
-                Serving Reston, Virginia and a 20-mile radius
+                Serving the entire DMV (D.C., Maryland, Virginia) region
               </p>
             </div>
           </div>
@@ -85,28 +85,29 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Service Areas</h3>
             <p className="text-gray-300 mb-4">
-              We proudly serve Reston, Virginia and a 20-mile radius, including:
+              We proudly serve the entire DMV (D.C., Maryland, Virginia) region, including:
             </p>
             <div className="grid grid-cols-2 gap-2">
-              <span className="text-gray-300">Herndon</span>
-              <span className="text-gray-300">Vienna</span>
-              <span className="text-gray-300">Tysons</span>
-              <span className="text-gray-300">Falls Church</span>
-              <span className="text-gray-300">Fairfax</span>
-              <span className="text-gray-300">Ashburn</span>
-              <span className="text-gray-300">Sterling</span>
-              <span className="text-gray-300">Chantilly</span>
-              <span className="text-gray-300">McLean</span>
-              <span className="text-gray-300">Oakton</span>
-              <span className="text-gray-300">Great Falls</span>
-              <span className="text-gray-300">Centreville</span>
-              <span className="text-gray-300">Manassas</span>
-              <span className="text-gray-300">Annandale</span>
-              <span className="text-gray-300">Springfield</span>
-              <span className="text-gray-300">Burke</span>
-              <span className="text-gray-300">Lorton</span>
-              <span className="text-gray-300">Woodbridge</span>
-              <span className="text-gray-300">Leesburg</span>
+              <span className="text-gray-300">Washington, D.C.</span>
+              <span className="text-gray-300">Arlington, VA</span>
+              <span className="text-gray-300">Alexandria, VA</span>
+              <span className="text-gray-300">Fairfax, VA</span>
+              <span className="text-gray-300">Loudoun County, VA</span>
+              <span className="text-gray-300">Prince William, VA</span>
+              <span className="text-gray-300">Montgomery County, MD</span>
+              <span className="text-gray-300">Prince George's, MD</span>
+              <span className="text-gray-300">Howard County, MD</span>
+              <span className="text-gray-300">Reston, VA</span>
+              <span className="text-gray-300">Herndon, VA</span>
+              <span className="text-gray-300">Vienna, VA</span>
+              <span className="text-gray-300">Tysons, VA</span>
+              <span className="text-gray-300">Falls Church, VA</span>
+              <span className="text-gray-300">Ashburn, VA</span>
+              <span className="text-gray-300">Sterling, VA</span>
+              <span className="text-gray-300">Chantilly, VA</span>
+              <span className="text-gray-300">McLean, VA</span>
+              <span className="text-gray-300">Oakton, VA</span>
+              <span className="text-gray-300">Great Falls, VA</span>
             </div>
           </div>
         </div>

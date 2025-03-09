@@ -33,7 +33,7 @@ const servicePages = [
     path: "storefront-glass",
     props: {
       title: "Storefront Glass Solutions",
-      description: "Professional storefront glass installation and repair for businesses in Reston and surrounding areas.",
+      description: "Professional storefront glass installation and repair for businesses throughout the DMV (D.C., Maryland, Virginia) region.",
       features: [
         "Custom storefront design and installation",
         "Emergency storefront glass repair",
@@ -52,7 +52,7 @@ const servicePages = [
             Our storefront services include new installations, renovations, and emergency repairs. We work with various glass types and framing systems to create the perfect storefront for your commercial property.
           </p>
           <p className="mt-4">
-            Whether you need a single door replaced or a complete storefront system installed, our team delivers exceptional results with minimal disruption to your business operations.
+            Whether you need a single door replaced or a complete storefront system installed, our team delivers exceptional results with minimal disruption to your business operations throughout the DMV region.
           </p>
         </>
       )
@@ -62,7 +62,7 @@ const servicePages = [
     path: "glass-doors",
     props: {
       title: "Glass Door Installation & Repair",
-      description: "Beautiful and functional glass doors for residential and commercial properties by Glass Genius.",
+      description: "Beautiful and functional glass doors for residential and commercial properties by Glass Genius across the DMV region.",
       features: [
         "Sliding glass door systems",
         "Hinged glass doors",
@@ -75,7 +75,7 @@ const servicePages = [
       content: (
         <>
           <p>
-            Enhance your property with elegant glass doors that combine functionality, durability, and style. Glass Genius offers a wide range of glass door solutions for homes and businesses throughout Reston and surrounding areas.
+            Enhance your property with elegant glass doors that combine functionality, durability, and style. Glass Genius offers a wide range of glass door solutions for homes and businesses throughout the DMV (D.C., Maryland, Virginia) region.
           </p>
           <p className="mt-4">
             Our glass door services include sliding doors, hinged doors, folding systems, and custom designs. We work with various glass types, hardware options, and framing materials to create doors that perfectly complement your space.

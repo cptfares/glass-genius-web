@@ -48,15 +48,15 @@ const Index = () => {
         latitude: 38.9586,
         longitude: -77.357,
       },
-      geoRadius: "32000",
+      geoRadius: "80000",
     },
   };
 
   return (
     <Layout>
       <Seo
-        title="Glass Genius | Professional Glass Repair & Installation in Reston, VA"
-        description="Glass Genius provides expert glass repair and installation services in Reston, Virginia and surrounding areas. Commercial and residential solutions with free estimates."
+        title="Glass Genius | Professional Glass Repair & Installation in DMV Region"
+        description="Glass Genius provides expert glass repair and installation services throughout the DMV (D.C., Maryland, Virginia) region. Commercial and residential solutions with free estimates."
         canonicalUrl="/"
         schema={schema}
       />
@@ -64,7 +64,7 @@ const Index = () => {
       {/* Hero Section */}
       <HeroSection
         title="Professional Glass Repair & Installation"
-        subtitle="Glass Genius provides expert glass repair and installation services in Reston, Virginia and surrounding areas. Commercial and residential solutions with free estimates."
+        subtitle="Glass Genius provides expert glass repair and installation services throughout the DMV (D.C., Maryland, Virginia) region. Commercial and residential solutions with free estimates."
       />
 
       {/* Services Preview */}
@@ -197,8 +197,7 @@ const Index = () => {
               <p className="text-white/80 mb-8">
                 Contact us today for a free estimate. We provide professional
                 glass repair and installation services for both commercial and
-                residential properties in Reston, Virginia and surrounding
-                areas.
+                residential properties throughout the DMV (D.C., Maryland, Virginia) region.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -219,10 +218,8 @@ const Index = () => {
               </div>
 
               <p className="text-white/80">
-                Serving Reston, Virginia and a 20-mile radius, including
-                Herndon, Vienna, Tysons, Falls Church, Fairfax, Ashburn,
-                Sterling, Chantilly, McLean, Oakton, Great Falls, Centreville,
-                Manassas, and more.
+                Serving throughout the DMV region, including Washington D.C., Northern Virginia (Arlington, Alexandria, Fairfax, Loudoun, Prince William), 
+                and Maryland (Montgomery, Prince George's, Howard). We also serve Reston, Herndon, Vienna, Tysons, Falls Church, Ashburn, Sterling, Chantilly, and more.
               </p>
             </div>
 
