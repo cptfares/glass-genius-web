@@ -21,74 +21,20 @@ import Services from "./pages/Services";
 import GlassRepair from "./pages/services/GlassRepair";
 import WindowReplacement from "./pages/services/WindowReplacement";
 import ShowerEnclosures from "./pages/services/ShowerEnclosures";
-
-// Import the ServiceTemplate to create other service pages
-import ServiceTemplate from "./pages/services/ServiceTemplate";
+import StorefrontGlass from "./pages/services/StorefrontGlass";
+import GlassDoors from "./pages/services/GlassDoors";
+import MirrorInstallation from "./pages/services/MirrorInstallation";
+import TableTops from "./pages/services/TableTops";
+import GlassRailings from "./pages/services/GlassRailings";
+import WindowTinting from "./pages/services/WindowTinting";
+import InsulatedGlass from "./pages/services/InsulatedGlass";
+import EmergencyRepair from "./pages/services/EmergencyRepair";
+import CommercialGlass from "./pages/services/CommercialGlass";
+import ResidentialGlass from "./pages/services/ResidentialGlass";
+import SecurityGlass from "./pages/services/SecurityGlass";
+import GlassPartitions from "./pages/services/GlassPartitions";
 
 const queryClient = new QueryClient();
-
-// Define content for other service pages
-const servicePages = [
-  {
-    path: "storefront-glass",
-    props: {
-      title: "Storefront Glass Solutions",
-      description: "Professional storefront glass installation and repair for businesses throughout the DMV (D.C., Maryland, Virginia) region.",
-      features: [
-        "Custom storefront design and installation",
-        "Emergency storefront glass repair",
-        "Safety and security glass options",
-        "ADA-compliant door systems",
-        "Energy-efficient glass solutions",
-        "Aluminum framing systems",
-        "Professional installation and service"
-      ],
-      content: (
-        <>
-          <p>
-            Make a strong first impression with high-quality storefront glass solutions from Glass Genius. We provide custom storefront systems designed to enhance your business's visibility, security, and energy efficiency.
-          </p>
-          <p className="mt-4">
-            Our storefront services include new installations, renovations, and emergency repairs. We work with various glass types and framing systems to create the perfect storefront for your commercial property.
-          </p>
-          <p className="mt-4">
-            Whether you need a single door replaced or a complete storefront system installed, our team delivers exceptional results with minimal disruption to your business operations throughout the DMV region.
-          </p>
-        </>
-      )
-    }
-  },
-  {
-    path: "glass-doors",
-    props: {
-      title: "Glass Door Installation & Repair",
-      description: "Beautiful and functional glass doors for residential and commercial properties by Glass Genius across the DMV region.",
-      features: [
-        "Sliding glass door systems",
-        "Hinged glass doors",
-        "Folding and stacking door systems",
-        "Interior glass office doors",
-        "Custom hardware options",
-        "Energy-efficient glass",
-        "Expert installation and service"
-      ],
-      content: (
-        <>
-          <p>
-            Enhance your property with elegant glass doors that combine functionality, durability, and style. Glass Genius offers a wide range of glass door solutions for homes and businesses throughout the DMV (D.C., Maryland, Virginia) region.
-          </p>
-          <p className="mt-4">
-            Our glass door services include sliding doors, hinged doors, folding systems, and custom designs. We work with various glass types, hardware options, and framing materials to create doors that perfectly complement your space.
-          </p>
-          <p className="mt-4">
-            From initial consultation to final installation, our team ensures a smooth process and exceptional results. Trust Glass Genius for beautiful glass doors that transform your property.
-          </p>
-        </>
-      )
-    }
-  },
-  // Add more service pages here as needed
-];
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -112,16 +58,19 @@ const App = () => (
             {/* Service pages */}
             <Route path="/services/glass-repair" element={<GlassRepair />} />
             <Route path="/services/window-replacement" element={<WindowReplacement />} />
+            <Route path="/services/storefront-glass" element={<StorefrontGlass />} />
+            <Route path="/services/glass-doors" element={<GlassDoors />} />
+            <Route path="/services/mirror-installation" element={<MirrorInstallation />} />
             <Route path="/services/shower-enclosures" element={<ShowerEnclosures />} />
-            
-            {/* Generate routes for other service pages */}
-            {servicePages.map(({ path, props }) => (
-              <Route 
-                key={path} 
-                path={`/services/${path}`} 
-                element={<ServiceTemplate {...props} />} 
-              />
-            ))}
+            <Route path="/services/table-tops" element={<TableTops />} />
+            <Route path="/services/glass-railings" element={<GlassRailings />} />
+            <Route path="/services/window-tinting" element={<WindowTinting />} />
+            <Route path="/services/insulated-glass" element={<InsulatedGlass />} />
+            <Route path="/services/emergency-repair" element={<EmergencyRepair />} />
+            <Route path="/services/commercial-glass" element={<CommercialGlass />} />
+            <Route path="/services/residential-glass" element={<ResidentialGlass />} />
+            <Route path="/services/security-glass" element={<SecurityGlass />} />
+            <Route path="/services/glass-partitions" element={<GlassPartitions />} />
             
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
