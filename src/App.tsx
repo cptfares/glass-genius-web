@@ -15,6 +15,7 @@ import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Commercial from "./pages/Commercial";
+import Services from "./pages/Services";
 
 // Import service pages
 import GlassRepair from "./pages/services/GlassRepair";
@@ -106,6 +107,7 @@ const App = () => (
             <Route path="/commercial" element={<Commercial />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/services" element={<Services />} />
             
             {/* Service pages */}
             <Route path="/services/glass-repair" element={<GlassRepair />} />
