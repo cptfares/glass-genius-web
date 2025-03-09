@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -7,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Preload from "@/components/seo/Preload";
 import ScrollToTop from "@/components/common/ScrollToTop";
+
 import Index from "./pages/Index";
 import About from "./pages/About";
 import EmergencyServices from "./pages/EmergencyServices";
@@ -17,7 +17,6 @@ import NotFound from "./pages/NotFound";
 import Commercial from "./pages/Commercial";
 import Services from "./pages/Services";
 
-// Import service pages
 import GlassRepair from "./pages/services/GlassRepair";
 import WindowReplacement from "./pages/services/WindowReplacement";
 import ShowerEnclosures from "./pages/services/ShowerEnclosures";
@@ -33,6 +32,7 @@ import CommercialGlass from "./pages/services/CommercialGlass";
 import ResidentialGlass from "./pages/services/ResidentialGlass";
 import SecurityGlass from "./pages/services/SecurityGlass";
 import GlassPartitions from "./pages/services/GlassPartitions";
+import FoggyGlassReplacement from "./pages/services/FoggyGlassReplacement";
 
 const queryClient = new QueryClient();
 
@@ -55,7 +55,6 @@ const App = () => (
             <Route path="/contact" element={<Contact />} />
             <Route path="/services" element={<Services />} />
             
-            {/* Service pages */}
             <Route path="/services/glass-repair" element={<GlassRepair />} />
             <Route path="/services/window-replacement" element={<WindowReplacement />} />
             <Route path="/services/storefront-glass" element={<StorefrontGlass />} />
@@ -71,8 +70,8 @@ const App = () => (
             <Route path="/services/residential-glass" element={<ResidentialGlass />} />
             <Route path="/services/security-glass" element={<SecurityGlass />} />
             <Route path="/services/glass-partitions" element={<GlassPartitions />} />
+            <Route path="/services/foggy-glass-replacement" element={<FoggyGlassReplacement />} />
             
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

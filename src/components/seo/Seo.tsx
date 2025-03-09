@@ -16,8 +16,9 @@ const Seo = ({
   ogImage = "/og-image.png", 
   schema 
 }: SeoProps) => {
-  const siteUrl = window.location.origin;
-  const pageUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : window.location.href;
+  // For SSR/pre-rendering we need to handle window object safely
+  const siteUrl = typeof window !== 'undefined' ? window.location.origin : 'https://glassgenius.com';
+  const pageUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : typeof window !== 'undefined' ? window.location.href : '';
   
   return (
     <Helmet>
