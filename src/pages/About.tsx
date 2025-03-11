@@ -31,7 +31,7 @@ const About = () => {
         availableLanguage: "English",
       },
       areaServed:
-        "Reston, Virginia and a 20-mile radius, including Herndon, Vienna, Tysons, Falls Church, Fairfax, Ashburn, Sterling, Chantilly, McLean, Oakton, Great Falls, Centreville, Manassas, and more",
+        "The entire DMV (D.C., Maryland, Virginia) region, including Washington, D.C., Arlington, Alexandria, Fairfax, Loudoun County, Prince William, Montgomery County, Prince George's, Howard County, and more.",
     },
   };
 
@@ -247,13 +247,16 @@ const About = () => {
         </div>
 
         {/* Service Areas */}
-       <div className="max-w-4xl mx-auto mb-16">
-  <h2 className="text-3xl font-bold mb-6 text-center">Our Service Areas</h2>
-  <p className="text-lg text-gray-700 mb-8 text-center">
+        <div className="max-w-4xl mx-auto mb-16">
+          <h2 className="text-3xl font-bold mb-6 text-center">
+            Our Service Areas
+          </h2>
+          <p className="text-lg text-gray-700 mb-8 text-center">
     We proudly serve the entire DMV (D.C., Maryland, Virginia) region, including:
-  </p>
 
-  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-8">
+          </p>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-8">
     <div className="bg-gray-50 p-3 rounded-lg text-center">Washington, D.C.</div>
     <div className="bg-gray-50 p-3 rounded-lg text-center">Arlington, VA</div>
     <div className="bg-gray-50 p-3 rounded-lg text-center">Alexandria, VA</div>
@@ -274,9 +277,7 @@ const About = () => {
     <div className="bg-gray-50 p-3 rounded-lg text-center">McLean, VA</div>
     <div className="bg-gray-50 p-3 rounded-lg text-center">Oakton, VA</div>
     <div className="bg-gray-50 p-3 rounded-lg text-center">Great Falls, VA</div>
-  </div>
-</div>
-
+          </div>
 
           <p className="text-center text-gray-600">
             Don't see your area listed? Contact us to check if we service your
