@@ -247,49 +247,36 @@ const About = () => {
         </div>
 
         {/* Service Areas */}
-        <div className="max-w-4xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-center">
-            Our Service Areas
-          </h2>
-          <p className="text-lg text-gray-700 mb-8 text-center">
-            Glass Genius proudly serves Reston, Virginia and a 20-mile radius,
-            covering these communities:
-          </p>
+       <div className="max-w-4xl mx-auto mb-16">
+  <h2 className="text-3xl font-bold mb-6 text-center">Our Service Areas</h2>
+  <p className="text-lg text-gray-700 mb-8 text-center">
+    We proudly serve the entire DMV (D.C., Maryland, Virginia) region, including:
+  </p>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-8">
-            <div className="bg-gray-50 p-3 rounded-lg text-center">Reston</div>
-            <div className="bg-gray-50 p-3 rounded-lg text-center">Herndon</div>
-            <div className="bg-gray-50 p-3 rounded-lg text-center">Vienna</div>
-            <div className="bg-gray-50 p-3 rounded-lg text-center">Tysons</div>
-            <div className="bg-gray-50 p-3 rounded-lg text-center">
-              Falls Church
-            </div>
-            <div className="bg-gray-50 p-3 rounded-lg text-center">Fairfax</div>
-            <div className="bg-gray-50 p-3 rounded-lg text-center">Ashburn</div>
-            <div className="bg-gray-50 p-3 rounded-lg text-center">
-              Sterling
-            </div>
-            <div className="bg-gray-50 p-3 rounded-lg text-center">
-              Chantilly
-            </div>
-            <div className="bg-gray-50 p-3 rounded-lg text-center">McLean</div>
-            <div className="bg-gray-50 p-3 rounded-lg text-center">Oakton</div>
-            <div className="bg-gray-50 p-3 rounded-lg text-center">
-              Great Falls
-            </div>
-            <div className="bg-gray-50 p-3 rounded-lg text-center">
-              Centreville
-            </div>
-            <div className="bg-gray-50 p-3 rounded-lg text-center">
-              Manassas
-            </div>
-            <div className="bg-gray-50 p-3 rounded-lg text-center">
-              Annandale
-            </div>
-            <div className="bg-gray-50 p-3 rounded-lg text-center">
-              Springfield
-            </div>
-          </div>
+  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-8">
+    <div className="bg-gray-50 p-3 rounded-lg text-center">Washington, D.C.</div>
+    <div className="bg-gray-50 p-3 rounded-lg text-center">Arlington, VA</div>
+    <div className="bg-gray-50 p-3 rounded-lg text-center">Alexandria, VA</div>
+    <div className="bg-gray-50 p-3 rounded-lg text-center">Fairfax, VA</div>
+    <div className="bg-gray-50 p-3 rounded-lg text-center">Loudoun County, VA</div>
+    <div className="bg-gray-50 p-3 rounded-lg text-center">Prince William, VA</div>
+    <div className="bg-gray-50 p-3 rounded-lg text-center">Montgomery County, MD</div>
+    <div className="bg-gray-50 p-3 rounded-lg text-center">Prince George's, MD</div>
+    <div className="bg-gray-50 p-3 rounded-lg text-center">Howard County, MD</div>
+    <div className="bg-gray-50 p-3 rounded-lg text-center">Reston, VA</div>
+    <div className="bg-gray-50 p-3 rounded-lg text-center">Herndon, VA</div>
+    <div className="bg-gray-50 p-3 rounded-lg text-center">Vienna, VA</div>
+    <div className="bg-gray-50 p-3 rounded-lg text-center">Tysons, VA</div>
+    <div className="bg-gray-50 p-3 rounded-lg text-center">Falls Church, VA</div>
+    <div className="bg-gray-50 p-3 rounded-lg text-center">Ashburn, VA</div>
+    <div className="bg-gray-50 p-3 rounded-lg text-center">Sterling, VA</div>
+    <div className="bg-gray-50 p-3 rounded-lg text-center">Chantilly, VA</div>
+    <div className="bg-gray-50 p-3 rounded-lg text-center">McLean, VA</div>
+    <div className="bg-gray-50 p-3 rounded-lg text-center">Oakton, VA</div>
+    <div className="bg-gray-50 p-3 rounded-lg text-center">Great Falls, VA</div>
+  </div>
+</div>
+
 
           <p className="text-center text-gray-600">
             Don't see your area listed? Contact us to check if we service your
